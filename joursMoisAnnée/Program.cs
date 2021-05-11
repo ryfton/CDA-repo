@@ -26,7 +26,7 @@ namespace joursMoisAnnée
             int.TryParse(dateComp[0], out jour);
             int.TryParse(dateComp[1], out mois);
             int.TryParse(dateComp[2], out année);
-            Console.WriteLine("j: {0} m: {1} a: {2}", jour, mois, année);
+            //Console.WriteLine("j: {0} m: {1} a: {2}", jour, mois, année);
 
             //Calcule et appelle des méthodes. 
             resultat4 = année / 4;
@@ -48,25 +48,25 @@ namespace joursMoisAnnée
             switch (_numJour)
             {
                 case 0:
-                    nomJour = "Lundi";
-                    break;
-                case 1:
-                    nomJour = "Mardi";
-                    break;
-                case 2:
-                    nomJour = "Mercredi";
-                    break;
-                case 3:
-                    nomJour = "Jeudi";
-                    break;
-                case 4:
-                    nomJour = "Vendredi";
-                    break;
-                case 5:
                     nomJour = "Samedi";
                     break;
-                case 6:
+                case 1:
                     nomJour = "Dimanche";
+                    break;
+                case 2:
+                    nomJour = "Lundi";
+                    break;
+                case 3:
+                    nomJour = "Mardi";
+                    break;
+                case 4:
+                    nomJour = "Mercredi";
+                    break;
+                case 5:
+                    nomJour = "Jeudi";
+                    break;
+                case 6:
+                    nomJour = "Vendredi";
                     break;
                 default:
                     nomJour = "Nombre de jour invalide";
