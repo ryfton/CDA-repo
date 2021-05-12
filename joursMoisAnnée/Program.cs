@@ -10,30 +10,31 @@ namespace joursMoisAnnée
     {
         static void Main(string[] args)
         {
-            //Déclaration.
+            // Déclaration.
             int jour,mois,année;
             int resultat4;
             int valeurMois=0;
             int rest7;
             string joursSemaine;
-
-            //Affichage.
+             
+            // Affichage demande à l'utilisateur.
             Console.WriteLine("ce programme permet de définir le jour de la semaines par raport a une date donnée entre 1900 et 1999 .\n");
             Console.WriteLine("Veulliez saisir votre date sous la forme jj/mm/aa:");
 
-            // Traitement de la saisi année initialiser le tableau  ,split de celle ci et assigner des valeurs aux différentes sorties.
+            // Traitement de la saisi année, déclaration et initialisation  du tableau ,split de celle ci et assignations des valeurs aux différentes variables.
             string[] dateComplete = Console.ReadLine().Split('/');
             int.TryParse(dateComplete[0], out jour);
             int.TryParse(dateComplete[1], out mois);
             int.TryParse(dateComplete[2], out année);
-            //Console.WriteLine("j: {0} m: {1} a: {2}", jour, mois, année);
+            // Console.WriteLine("j: {0} m: {1} a: {2}", jour, mois, année);
 
-            //Calcule et appelle des méthodes. 
+            // Calcule et appelle des méthodes. 
             resultat4 = année / 4;
             valeurMois=MoisDonné(mois,année);
             rest7 = (année + resultat4 + valeurMois + jour) % 7;
             joursSemaine = JourSemaine(rest7);
 
+            // affichage resultat 
             Console.WriteLine(joursSemaine);
         }
         /// <summary>
