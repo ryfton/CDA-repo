@@ -15,7 +15,7 @@ namespace joursMoisAnnée
             int resultat4;
             int valeurMois=0;
             int rest7;
-            string joursSemaine;
+            string joursTouver;
              
             // Affichage demande à l'utilisateur.
             Console.WriteLine("ce programme permet de définir le jour de la semaines par raport a une date donnée entre 1900 et 1999 .\n");
@@ -32,10 +32,10 @@ namespace joursMoisAnnée
             resultat4 = année / 4;
             valeurMois=MoisDonné(mois,année);
             rest7 = (année + resultat4 + valeurMois + jour) % 7;
-            joursSemaine = JourSemaine(rest7);
+            joursTouver = JourSemaine(rest7);
 
             // affichage resultat 
-            Console.WriteLine(joursSemaine);
+            Console.WriteLine(joursTouver);
         }
         /// <summary>
         /// Permet de retrouver un jour grace à un int sous forme de switch.
