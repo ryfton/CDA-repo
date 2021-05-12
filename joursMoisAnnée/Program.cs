@@ -20,12 +20,12 @@ namespace joursMoisAnnée
             //Affichage.
             Console.WriteLine("ce programme permet de définir le jour de la semaines par raport a une date donnée entre 1900 et 1999 .\n");
             Console.WriteLine("Veulliez saisir votre date sous la forme jj/mm/aa:");
-        
-            // Traitement de la saisi année ,split de celle ci et atribution des valeurs aux différentes sorties.
-            string[] dateComp = Console.ReadLine().Split('/');
-            int.TryParse(dateComp[0], out jour);
-            int.TryParse(dateComp[1], out mois);
-            int.TryParse(dateComp[2], out année);
+
+            // Traitement de la saisi année initialiser le tableau  ,split de celle ci et assigner des valeurs aux différentes sorties.
+            string[] dateComplete = Console.ReadLine().Split('/');
+            int.TryParse(dateComplete[0], out jour);
+            int.TryParse(dateComplete[1], out mois);
+            int.TryParse(dateComplete[2], out année);
             //Console.WriteLine("j: {0} m: {1} a: {2}", jour, mois, année);
 
             //Calcule et appelle des méthodes. 
