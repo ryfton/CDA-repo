@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NombreDeJeunes", "NombreDeJ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestEstPremier", "UnitTestEstPremier\UnitTestEstPremier.csproj", "{67983FE6-8D2D-4D93-9AA0-4ACB5B2BE904}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diviseur", "Diviseur\Diviseur.csproj", "{3D849D3B-7F7E-450C-BBBA-27EC1CA1234C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unitaireNombreJeune", "unitaireNombreJeune\unitaireNombreJeune.csproj", "{0A22B265-0E6F-4E1B-9C28-F97A73E86567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{67983FE6-8D2D-4D93-9AA0-4ACB5B2BE904}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67983FE6-8D2D-4D93-9AA0-4ACB5B2BE904}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67983FE6-8D2D-4D93-9AA0-4ACB5B2BE904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D849D3B-7F7E-450C-BBBA-27EC1CA1234C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D849D3B-7F7E-450C-BBBA-27EC1CA1234C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D849D3B-7F7E-450C-BBBA-27EC1CA1234C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D849D3B-7F7E-450C-BBBA-27EC1CA1234C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A22B265-0E6F-4E1B-9C28-F97A73E86567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A22B265-0E6F-4E1B-9C28-F97A73E86567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A22B265-0E6F-4E1B-9C28-F97A73E86567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A22B265-0E6F-4E1B-9C28-F97A73E86567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
