@@ -48,7 +48,7 @@ namespace Diviseur
                 }
                 while (diviseur < nombre);
             }
-            Console.WriteLine(diviseurs)
+            Console.WriteLine(diviseurs);
 
 
 
