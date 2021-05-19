@@ -73,8 +73,9 @@ namespace RechercheNombre
 
 
             // recherche et affichage du nombre à l'aide des méthodes RechercheNombreDonné et ValeurIndiceNombre. 
-            RechercheNombreDonné(nombrARechercher, listNombre);
-            ValeurIndiceNombre(nombrARechercher, listNombre);
+           // RechercheNombreDonné(nombrARechercher, listNombre);
+            int indice =ValeurIndiceNombre(nombrARechercher, listNombre);
+            Console.WriteLine("l'indice de "+nombrARechercher+ "  dans le tableau est: " + indice);
 
             Console.ReadKey();
 
@@ -86,25 +87,49 @@ namespace RechercheNombre
         /// </summary>
         /// <param name="_nombreDonné"></param>
         /// <param name="_listeNombre"></param>
-        public static void ValeurIndiceNombre(int _nombreDonné, List<int> _listeNombre)
+        public static int ValeurIndiceNombre(int _nombreDonné, List<int> _listeNombre)
         {
-            int ondex = 0;
-            foreach (int item in _listeNombre)
+            int flag = 0;
+            int index = 0;
+            bool trouver=true;
+            
+
+            
+            while (trouver==true && index< _listeNombre.Count)
             {
-                
-                
-
-
-                if (item != _nombreDonné)
+                if (_listeNombre[flag] == _nombreDonné)
                 {
-                    ondex++;
+                       
+                        trouver = false;
+
+
                 }
                 else
                 {
-                    Console.WriteLine("l'indice du nombre dans le tableau est: " + ondex);
+                    flag++;
+                    index++;
                 }
-               
+
             }
+            
+            return index;
+           // foreach (int item in _listeNombre)
+            //{
+
+
+
+
+            //    if (item != _nombreDonné)
+            //    {
+            //        ondex++;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("l'indice du nombre dans le tableau est: " + ondex);
+            //    }
+
+            //}
+
 
         }
         /// <summary>

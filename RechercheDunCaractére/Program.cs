@@ -8,30 +8,70 @@ namespace RechercheDunCaractére
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-
+                                         
             Console.WriteLine("veulliez saisire une phrase et finir par un point.");
             string phrase = Console.ReadLine();
-            ChaineVide(phrase);
+
+            string statueChaine=ChaineVide(phrase);
+            Console.WriteLine(statueChaine);
+
+
+
+
+            if (statueChaine!= "la phrase est vide.")
+            {
+                Console.WriteLine("veuillez saisire un caractére pour la recherche :");
+                string c = Console.ReadLine();
+                char caratére = char.Parse(c);
+                int nombreDefois = RechercheCaractéreNombreOccurrence(caratére, phrase);
+                
+                 if (nombreDefois==0)
+                 {
+                    Console.WriteLine("la lettre n'est pas présente");
+                 }
+                 else
+                {
+                    Console.WriteLine($"la lettre est presente {nombreDefois} fois");
+                }
+            }
+
+
 
             Console.ReadKey();
         }
-        public static void RechercheCaractére(char _a, string _chaineCaractére)
+        public static int RechercheCaractéreNombreOccurrence(char _a, string _chaineCaractére)
         {
-
-        }
-        public static void ChaineVide(string _chaineCaractére)
-        {
-
-
-            if (_chaineCaractére.Length == 0)
+            
+            int compteur=0;
+            foreach (char c in _chaineCaractére)
             {
-                Console.WriteLine("la phrase est vide.");
-
-                // Console.WriteLine("la phrase est vide."​);
+                if (c== _a)
+                {
+                    compteur++;
+                }
+               
             }
+       
+            return compteur;
+        }
+        public static string ChaineVide(string _chaineCaractére)
+        {
+            string statusChaine="";
+
+            if (_chaineCaractére.Length <=1  ||_chaineCaractére.Length==0)
+            
+                statusChaine="la phrase est vide.";
+            return statusChaine;
+
+               
+            
 
         }
+        
+            
+            
+        
     }
 }
