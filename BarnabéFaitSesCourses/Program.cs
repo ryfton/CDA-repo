@@ -12,9 +12,9 @@ namespace BarnabéFaitSesCourses
         {
             double solde;
             double nvSolde=0;
-            int nombreDeMagasin=0;
-            int nombreMag;
-
+            int nombreDeMagasin=1;
+            
+            
             Console.WriteLine("veuillez saisir le solde du portfeuille de barnabé");
             solde = int.Parse(Console.ReadLine());
 
@@ -22,18 +22,22 @@ namespace BarnabéFaitSesCourses
             while (nvSolde> 2) 
             {
                  nvSolde= DépenseDuSolde(nvSolde);
+                
 
                 nombreDeMagasin++;
+                if (nvSolde < 2)
+                {
+                    nvSolde = 0;
+                    nombreDeMagasin++;
 
-            Console.WriteLine("il reste " + nvSolde+ " à Barnabé");
+                }
+
+
+                Console.WriteLine("En sortant du magasin n°:"+nombreDeMagasin+" il reste " + nvSolde+ " euros à Barnabé");
             }
-            if (nvSolde>0)
-            {
-                nvSolde = 0;
-            }
+        
 
-
-            Console.WriteLine("Barnabé n'a plus assez pour pour continuer ces course, il lui reste " + nvSolde+" et il a pus faire "+nombreDeMagasin);
+            Console.WriteLine("Barnabé n'a plus assez pour pour continuer ces course, il lui reste " + nvSolde+" et il a pus faire "+nombreDeMagasin+" magasin");
 
             Console.ReadKey();
 
