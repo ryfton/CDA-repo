@@ -30,6 +30,7 @@ namespace lireTroisNombre
            
             Console.WriteLine("tapez une touche pour quitter");
             Console.ReadKey();
+            
         }
         public static void TriBule(int[] _t)
         {
