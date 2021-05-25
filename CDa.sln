@@ -63,6 +63,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exercicep13", "exercicep13"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "exercicep9", "exercicep9", "{6A432B11-9E64-49AF-8F5D-449CCD9E8AE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuxDuPendu", "JeuxDuPendu\JeuxDuPendu.csproj", "{2CDA501A-BCF0-4A66-A268-57B08ABC593D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{5F5F784A-743E-450B-9906-E8C4F19420C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F5F784A-743E-450B-9906-E8C4F19420C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F5F784A-743E-450B-9906-E8C4F19420C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDA501A-BCF0-4A66-A268-57B08ABC593D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDA501A-BCF0-4A66-A268-57B08ABC593D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDA501A-BCF0-4A66-A268-57B08ABC593D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDA501A-BCF0-4A66-A268-57B08ABC593D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,6 +210,7 @@ Global
 		{E67ABE77-CBC6-47F7-BD79-7F6E007DE56D} = {67F03DB0-1BA8-450A-BBF0-B2B397542881}
 		{AD5328D8-5401-4CA1-8F29-06557F2BEC83} = {67F03DB0-1BA8-450A-BBF0-B2B397542881}
 		{5F5F784A-743E-450B-9906-E8C4F19420C6} = {67F03DB0-1BA8-450A-BBF0-B2B397542881}
+		{2CDA501A-BCF0-4A66-A268-57B08ABC593D} = {EF7B1843-08C8-448A-AE68-D7F60D59BB4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89F469F5-2104-456D-804F-8AE6D31A089C}
