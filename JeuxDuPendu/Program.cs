@@ -33,9 +33,12 @@ namespace JeuxDuPendu
             {
                 // affichage mot jouer1
                 // v 1 "char[] motTrouver =mot.ToCharArray();"
-                List<char> motJoueurDeux = new List<char>();
+                
                 List<char> motJoueurUn = mot.ToList();
                 List<char> motJoueurUnCompare = mot.ToList();
+                List<char> motJoueurDeux = new List<char>();
+
+
 
                 for (int i = 1; i < motJoueurUn.Count - 1; i++)
                 {
@@ -57,12 +60,13 @@ namespace JeuxDuPendu
 
                     
 
-                    recherche = RechercheCaractére(caratére,mot);
+                    recherche = RechercheCaractére(caratére, motJoueurUnCompare);
 
                     if (recherche == caratére)
                     {
                       
                         motJoueurDeux.Add(recherche);
+
 
 
                          Afficher(recherche, motJoueurDeux,motJoueurUnCompare);// {probleme avec les lettres identique}
@@ -108,7 +112,7 @@ namespace JeuxDuPendu
        
 
         }
-        public static char RechercheCaractére(char _a, string _chaineCaractére)
+        public static char RechercheCaractére(char _a, List<char> _chaineCaractére)
         {
             bool charOk=false;
             char vide = '_';
