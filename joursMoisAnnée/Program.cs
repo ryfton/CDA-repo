@@ -11,12 +11,12 @@ namespace joursMoisAnnée
         static void Main(string[] args)
         {
             // Déclaration.
-            int jour,mois,année;
+            int jour, mois, année;
             int resultat4;
-            int valeurMois=0;
+            int valeurMois = 0;
             int rest7;
             string joursTouver;
-             
+
             // Affichage demande à l'utilisateur.
             Console.WriteLine("ce programme permet de définir le jour de la semaines par raport a une date donnée entre 1900 et 1999 .\n");
             Console.WriteLine("Veulliez saisir votre date sous la forme jj/mm/aa:");
@@ -30,7 +30,7 @@ namespace joursMoisAnnée
 
             // Calcule et appelle des méthodes. 
             resultat4 = année / 4;
-            valeurMois=MoisDonné(mois,année);
+            valeurMois = MoisDonné(mois, année);
             rest7 = (année + resultat4 + valeurMois + jour) % 7;
             joursTouver = JourSemaine(rest7);
 
@@ -82,17 +82,17 @@ namespace joursMoisAnnée
         /// <param name="_mois"></param>
         /// <param name="_année"></param>
         /// <returns>valeurMois</returns>
-        static int MoisDonné(int _mois,int _année)
+        static int MoisDonné(int _mois, int _année)
         {
             int valeurMois;
 
             switch (_mois)
             {
                 case 1:
-                    if (DateTime.IsLeapYear(_année))                   
+                    if (DateTime.IsLeapYear(_année))
                         valeurMois = 0;
                     else
-                    valeurMois = 1;
+                        valeurMois = 1;
                     break;
                 case 2:
                     if (DateTime.IsLeapYear(_année))
@@ -101,8 +101,10 @@ namespace joursMoisAnnée
                         valeurMois = 4;
                     break;
                 case 3:
-                    valeurMois = 4;
-                    break;
+                    
+                        valeurMois = 4;
+                        break;
+                    
                 case 4:
                     valeurMois = 0;
                     break;
@@ -116,7 +118,7 @@ namespace joursMoisAnnée
                     valeurMois = 0;
                     break;
                 case 8:
-                    valeurMois =3;
+                    valeurMois = 3;
                     break;
                 case 9:
                     valeurMois = 6;
@@ -137,7 +139,7 @@ namespace joursMoisAnnée
                 default:
                     throw new Exception("mois invalide");
 
-                    
+
             }
             return valeurMois;
         }
