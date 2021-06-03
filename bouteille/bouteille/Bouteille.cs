@@ -9,29 +9,31 @@
 
 
 
-namespace CodeBouteille {
-	public class Bouteille {
+namespace CodeBouteille
+{
+    public class Bouteille
+    {
 
-		private decimal contenanceEnL;
-		private decimal contenuEnPourcentage;
-		private bool ouvert;
+        private decimal contenanceEnL;
+        private decimal contenuEnPourcentage;
+        private bool ouvert;
 
-		//propriétés
-		private decimal ContenaceEnLitre
+        //propriétés
+        private decimal ContenaceEnLitre
         {
-			get { return contenanceEnL; }
-             
+            get { return contenanceEnL; }
+
         }
-		private decimal ContenuEnPourcentage
-		{
-			get { return contenuEnPourcentage; }
-		
-		}
-		private bool Ouvert
-		{
-			get { return ouvert; }
-			
-		}
+        private decimal ContenuEnPourcentage
+        {
+            get { return contenuEnPourcentage; }
+
+        }
+        private bool Ouvert
+        {
+            get { return ouvert; }
+
+        }
 
         //constructeur par defaut
         //public Bouteille()
@@ -42,122 +44,131 @@ namespace CodeBouteille {
 
         //}
 
-        public Bouteille(decimal _contenaceEnLitre,decimal _contenuEnPourcentage,bool _ouvert)
+        public Bouteille(decimal _contenaceEnLitre, decimal _contenuEnPourcentage, bool _ouvert)
         {
-			contenanceEnL = _contenaceEnLitre;
-			contenuEnPourcentage = _contenuEnPourcentage;
-			ouvert = _ouvert;
+            contenanceEnL = _contenaceEnLitre;
+            contenuEnPourcentage = _contenuEnPourcentage;
+            ouvert = _ouvert;
         }
 
-		public void Fermer(){
-            if (ouvert==true)
+        public bool Fermer()
+        {
+            if (ouvert == true)
             {
-				ouvert = false;
-
-			}
-			
-
-
-			
-		}
-
-		public void Ouvrir(){
-            if (ouvert==false)
-            {
-				ouvert = true;
+                ouvert = false;
 
             }
 
-			
-		}
+            return ouvert;
 
-		/// 
-		/// <param name="aRajouterEnPourcentage"></param>
-		public bool Remplir(decimal _aRajouterEnPourcentage){
-            if (ouvert==true&&contenuEnPourcentage<100)
+
+        }
+
+        public bool Ouvrir()
+        {
+            if (ouvert == false)
             {
-                if ((_aRajouterEnPourcentage+contenuEnPourcentage)<100)
+                ouvert = true;
+
+            }
+            return ouvert;
+
+
+        }
+
+        /// 
+        /// <param name="aRajouterEnPourcentage"></param>
+        public bool Remplir(decimal _aRajouterEnPourcentage)
+        {
+            bool peutRemplir;
+            if (ouvert == true && contenuEnPourcentage < 100)
+            {
+                if ((_aRajouterEnPourcentage + contenuEnPourcentage) < 100)
                 {
-					contenuEnPourcentage = _aRajouterEnPourcentage + contenuEnPourcentage;
-					return true;
+                    contenuEnPourcentage = _aRajouterEnPourcentage + contenuEnPourcentage;
+                    peutRemplir = true;
                 }
                 else
                 {
-					return false;
-				}
-				
+                    peutRemplir = false;
+                }
+
 
             }
             else
             {
-				return false;
+                peutRemplir = false;
 
-			}
+            }
+            return peutRemplir;
 
-			
-		}
+        }
 
-		public bool RemplirTout(){
-            if (ouvert==true&&contenuEnPourcentage<100)
+        public bool RemplirTout()
+        {
+            if (ouvert == true && contenuEnPourcentage < 100)
             {
-				contenuEnPourcentage = 100;
-				return true;
+                contenuEnPourcentage = 100;
+                return true;
             }
             else
             {
-				return false;
-			}
+                return false;
+            }
 
-			
-		}
 
-		/// 
-		/// <param name="aOterEnPourcentage"></param>
-		public bool Vider(decimal _aOterEnPourcentage){
-			if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
+        }
+
+        /// 
+        /// <param name="aOterEnPourcentage"></param>
+        public bool Vider(decimal _aOterEnPourcentage)
+        {
+            bool peutVider;
+            if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
             {
-                
-                
-
-                
-				if ((  contenuEnPourcentage- _aOterEnPourcentage) != 0)
-				{
-					contenuEnPourcentage -= _aOterEnPourcentage ;
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-				
-
-
-			}
-			else
-			{
-				return false;
-
-			}
 
 
 
-		}
 
-		public bool ViderTout(){
+                if ((contenuEnPourcentage - _aOterEnPourcentage) != 0)
+                {
+                    contenuEnPourcentage -= _aOterEnPourcentage;
+                    peutVider = true;
+                }
+                else
+                {
+                    peutVider = false;
+                }
 
-			if (ouvert == true && contenuEnPourcentage != 0)
-			{
-				contenuEnPourcentage = 0;
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+
+
+            }
+            else
+            {
+                peutVider = false;
+
+            }
+            return peutVider;
+
+
+        }
+
+        public bool ViderTout()
+        {
+
+            if (ouvert == true && contenuEnPourcentage != 0)
+            {
+                contenuEnPourcentage = 0;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public override string ToString()
         {
-			return base.ToString() + " la bouteille est remplie a :" + contenuEnPourcentage + " %.";
+            return base.ToString() + " la bouteille est remplie a :" + contenuEnPourcentage + " %.";
         }
 
     }//end Bouteille
