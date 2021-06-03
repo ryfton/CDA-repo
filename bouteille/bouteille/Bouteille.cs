@@ -123,30 +123,14 @@ namespace CodeBouteille
         /// <param name="aOterEnPourcentage"></param>
         public bool Vider(decimal _aOterEnPourcentage)
         {
-            bool peutVider;
+            bool peutVider = false; // ST Optimisation
             if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
-            {
-
-
-
-
+            { 
                 if ((contenuEnPourcentage - _aOterEnPourcentage) != 0)
                 {
                     contenuEnPourcentage -= _aOterEnPourcentage;
                     peutVider = true;
                 }
-                else
-                {
-                    peutVider = false;
-                }
-
-
-
-            }
-            else
-            {
-                peutVider = false;
-
             }
             return peutVider;
 
