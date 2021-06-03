@@ -10,16 +10,20 @@ namespace CodeBouteille
     {
         static void Main(string[] args)
         {
-            decimal contenace;
-            decimal contenu;
-            bool ouvert;
+            decimal contenace=5;
+            decimal contenu=0;
+            bool ouvert=true;
             decimal arajouter=10;
+            
             Bouteille perrierBouteille;
-            perrierBouteille = new Bouteille();
+            perrierBouteille = new Bouteille(contenace,contenu,ouvert);
             perrierBouteille.Ouvrir();
             perrierBouteille.Remplir(arajouter);
+            perrierBouteille.Vider(5);
+            perrierBouteille.Remplir(80);
+            Console.WriteLine( perrierBouteille.ToString());
 
-
+            Console.ReadKey();
         }
     }
 }

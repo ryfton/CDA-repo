@@ -17,31 +17,32 @@ namespace CodeBouteille {
 		private bool ouvert;
 
 		//propriétés
-		public decimal ContenaceEnLitre
+		private decimal ContenaceEnLitre
         {
 			get { return contenanceEnL; }
-            set { contenanceEnL = value; }
+             
         }
-		public decimal ContenuEnPourcentage
+		private decimal ContenuEnPourcentage
 		{
 			get { return contenuEnPourcentage; }
-			set {contenuEnPourcentage = value; }
+		
 		}
-		public bool Ouvert
+		private bool Ouvert
 		{
 			get { return ouvert; }
-			set { ouvert = value; }
+			
 		}
 
-		// constructeur par defaut
-		public Bouteille(){
-			this.contenanceEnL = 0;
-			this.contenuEnPourcentage = 0;
-			this.ouvert = true;
+        //constructeur par defaut
+        //public Bouteille()
+        //{
+        //    this.contenanceEnL = 0;
+        //    this.contenuEnPourcentage = 0;
+        //    this.ouvert = true;
 
-		}
+        //}
 
-		public Bouteille(decimal _contenaceEnLitre,decimal _contenuEnPourcentage,bool _ouvert)
+        public Bouteille(decimal _contenaceEnLitre,decimal _contenuEnPourcentage,bool _ouvert)
         {
 			contenanceEnL = _contenaceEnLitre;
 			contenuEnPourcentage = _contenuEnPourcentage;
@@ -97,22 +98,68 @@ namespace CodeBouteille {
 		}
 
 		public bool RemplirTout(){
+            if (ouvert==true&&contenuEnPourcentage<100)
+            {
+				contenuEnPourcentage = 100;
+				return true;
+            }
+            else
+            {
+				return false;
+			}
 
-			return false;
+			
 		}
 
 		/// 
 		/// <param name="aOterEnPourcentage"></param>
-		public bool Vider(decimal aOterEnPourcentage){
+		public bool Vider(decimal _aOterEnPourcentage){
+			if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
+            {
+                
+                
 
-			return false;
+                
+				if ((  contenuEnPourcentage- _aOterEnPourcentage) != 0)
+				{
+					contenuEnPourcentage -= _aOterEnPourcentage ;
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				
+
+
+			}
+			else
+			{
+				return false;
+
+			}
+
+
+
 		}
 
 		public bool ViderTout(){
 
-			return false;
+			if (ouvert == true && contenuEnPourcentage != 0)
+			{
+				contenuEnPourcentage = 0;
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
+        public override string ToString()
+        {
+			return base.ToString() + " la bouteille est remplie a :" + contenuEnPourcentage + " %.";
+        }
 
-	}//end Bouteille
+    }//end Bouteille
 
 }//end namespace Bouteille
