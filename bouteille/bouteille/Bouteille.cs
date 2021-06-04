@@ -18,7 +18,7 @@ namespace CodeBouteille
         private decimal contenuEnPourcentage;
         private bool ouvert;
 
-        //propri�t�s
+        //propriétés
         private decimal ContenaceEnLitre
         {
             get { return contenanceEnL; }
@@ -53,7 +53,7 @@ namespace CodeBouteille
 
         public bool Fermer()
         {
-            
+
             if (ouvert == true)
             {
                 ouvert = false;
@@ -81,7 +81,7 @@ namespace CodeBouteille
                 return false;
 
             }
-            
+
 
 
         }
@@ -90,7 +90,7 @@ namespace CodeBouteille
         /// <param name="aRajouterEnPourcentage"></param>
         public bool Remplir(decimal _aRajouterEnPourcentage)
         {
-            bool peutRemplir=false;
+            bool peutRemplir = false;
             if (ouvert == true && contenuEnPourcentage <= 100)
             {
                 if ((_aRajouterEnPourcentage + contenuEnPourcentage) <= 100)
@@ -133,14 +133,30 @@ namespace CodeBouteille
         /// <param name="aOterEnPourcentage"></param>
         public bool Vider(decimal _aOterEnPourcentage)
         {
-            bool peutVider=false;
+            bool peutVider = false;
             if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
-            { 
+            {
+
+
+
+
                 if ((contenuEnPourcentage - _aOterEnPourcentage) != 0)
                 {
                     contenuEnPourcentage -= _aOterEnPourcentage;
                     peutVider = true;
                 }
+                else
+                {
+                    peutVider = false;
+                }
+
+
+
+            }
+            else
+            {
+                peutVider = false;
+
             }
             return peutVider;
 
