@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace CodeBouteille
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            decimal contenace=5;
+            decimal contenance=5;
             decimal contenu=0;
             bool ouvert=true;
             decimal arajouter=10;
             
             Bouteille perrierBouteille;
-            perrierBouteille = new Bouteille(contenace,contenu,ouvert);
+            perrierBouteille = new Bouteille(contenance,contenu,ouvert);
             perrierBouteille.Ouvrir();
             perrierBouteille.Remplir(arajouter);
             perrierBouteille.Vider(5);

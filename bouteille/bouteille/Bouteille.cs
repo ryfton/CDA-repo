@@ -53,13 +53,18 @@ namespace CodeBouteille
 
         public bool Fermer()
         {
+            
             if (ouvert == true)
             {
                 ouvert = false;
+                return true;
 
             }
-
-            return ouvert;
+            else
+            {
+                return false;
+                // throw new Exeption("")
+            }
 
 
         }
@@ -69,9 +74,14 @@ namespace CodeBouteille
             if (ouvert == false)
             {
                 ouvert = true;
+                return true;
+            }
+            else
+            {
+                return false;
 
             }
-            return ouvert;
+            
 
 
         }
@@ -80,10 +90,10 @@ namespace CodeBouteille
         /// <param name="aRajouterEnPourcentage"></param>
         public bool Remplir(decimal _aRajouterEnPourcentage)
         {
-            bool peutRemplir;
-            if (ouvert == true && contenuEnPourcentage < 100)
+            bool peutRemplir=false;
+            if (ouvert == true && contenuEnPourcentage <= 100)
             {
-                if ((_aRajouterEnPourcentage + contenuEnPourcentage) < 100)
+                if ((_aRajouterEnPourcentage + contenuEnPourcentage) <= 100)
                 {
                     contenuEnPourcentage = _aRajouterEnPourcentage + contenuEnPourcentage;
                     peutRemplir = true;
@@ -106,7 +116,7 @@ namespace CodeBouteille
 
         public bool RemplirTout()
         {
-            if (ouvert == true && contenuEnPourcentage < 100)
+            if (ouvert == true && contenuEnPourcentage <= 100)
             {
                 contenuEnPourcentage = 100;
                 return true;
@@ -123,7 +133,7 @@ namespace CodeBouteille
         /// <param name="aOterEnPourcentage"></param>
         public bool Vider(decimal _aOterEnPourcentage)
         {
-            bool peutVider;
+            bool peutVider=false;
             if (ouvert == true && contenuEnPourcentage != 0 && contenuEnPourcentage > 0)
             {
 
