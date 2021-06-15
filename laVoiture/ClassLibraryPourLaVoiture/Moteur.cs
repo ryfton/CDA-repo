@@ -13,29 +13,51 @@ namespace ClassLibraryPourLaVoiture
 		private bool estDemarre;
 		private int nbCV;
 
+        public bool EstDemarre { get => estDemarre; }
+        public int NbCV { get => nbCV;}
 
 
-		~Moteur(){
+
+        //Constructeur par defaut
+        public Moteur()
+		{
+			estDemarre = false;
+			nbCV = 4;
+
+		}
+		// constructeur classique
+		public Moteur(bool estDeemarre, int nbCV)
+		{
+			this.estDemarre = estDeemarre;
+			this.nbCV = nbCV;
+		}
+		//constructeur par recopie ou ":this(_copieMoteur.estDemarre,_copieMoteur.nbCV)"
+		public Moteur(Moteur _copieMoteur)
+		{
+			 estDemarre=_copieMoteur.estDemarre ;
+			 nbCV=_copieMoteur.nbCV ;
 
 		}
 
-		public virtual void Dispose(){
+		
+		
+		
 
+		public bool Demarrer()
+		{
+			bool demare=true ;
+            if (estDemarre==false)
+            {
+				estDemarre = true;
+				demare = true;
+
+			}
+			return demare;
 		}
 
-		public Moteur(){
-
-		}
-
-		public bool Demarrer(){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="roueMotrice2"></param>
-		/// <param name="roueMotrice1"></param>
-		public void Entrainer(Roue roueMotrice2, Roue roueMotrice1){
+		
+		public void Entrainer(Roue mesRoue)
+		{
 
 		}
 

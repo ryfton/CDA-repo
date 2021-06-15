@@ -14,25 +14,31 @@ namespace ClassLibraryPourLaVoiture
 	public class Roue {
 
 		private int diametre;
-		private bool tourne;
+        private bool tourne;
 
-		public Roue(){
-			Dictionary<string, Roue> mesRoues = new Dictionary<string, Roue>();
-			mesRoues.Add("roueMotriceAvtGauche", new Roue());
-			mesRoues.Add("roueMotriceAvtDroite", new Roue());
-			mesRoues.Add("roueArDroite", new Roue());
-			mesRoues.Add("roueArGauche", new Roue());
+        public bool Tourne { get => tourne;  }
+        public int Diametre { get => diametre; }
+		//Constructeur par defaut;
+        public Roue()
+		{
+			diametre = 16;
+			tourne = false;
+
+        }
+		// constructeur classique
+        public Roue(int diametre, bool tourne)
+        {
+            this.diametre = diametre;
+            this.tourne = tourne;
+        }
+		//constructeur par recopie
+		public Roue(Roue _copieRoue)
+        {
+			diametre = _copieRoue.diametre;
+			tourne = _copieRoue.tourne;
 
 		}
-
-		~Roue(){
-
-		}
-
-		public virtual void Dispose(){
-
-		}
-
+        
 		public bool Tourner(){
 
 			return false;

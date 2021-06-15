@@ -10,41 +10,78 @@
 
 
 
+using System.Collections.Generic;
+
 namespace ClassLibraryPourLaVoiture
 {
 	public class Voiture {
 
-		private int compteurEnKM;
-		private Roue sesRoues;
+		private int compteurEnKM;		
 		private Moteur sonMoteur;
-		private Roue maRoueMotriceAvantDroit;
-		private Roue maRoueMotriceAvantGauche;
+		Dictionary<string, Roue> mesRoues;
 
-		public Voiture(){
+        public int CompteurEnKM { get => compteurEnKM; }
+        public Moteur SonMoteur { get => sonMoteur;  }
+        public Dictionary<string, Roue> MesRoues { get => mesRoues; }
+
+
+        //Constructeur par defaut;
+        public Voiture()
+		{
+			compteurEnKM = 0;
+			sonMoteur = new Moteur();
+			mesRoues= new Dictionary<string, Roue>();
+			mesRoues.Add("roueMotriceAvtGauche", new Roue());
+			mesRoues.Add("roueMotriceAvtDroite", new Roue());
+			mesRoues.Add("roueARDroite", new Roue());
+			mesRoues.Add("roueARGauche", new Roue());
 
 		}
-
-		~Voiture(){
+		// constructeur classique
+		public Voiture(int compteurEnKM,Moteur sonMoteur, Dictionary<string, Roue> mesRoues)
+        {
+			this.compteurEnKM = compteurEnKM;
+			this.sonMoteur = sonMoteur;
+			this.mesRoues = mesRoues;
 
 		}
+		//constructeur par recopie
+		public Voiture(Voiture _copieVoiture)
+        {
+			compteurEnKM = _copieVoiture.compteurEnKM;
+			sonMoteur = _copieVoiture.sonMoteur;
+			mesRoues = _copieVoiture.mesRoues;
+        }
+	
 
-		public virtual void Dispose(){
-
-		}
-
-		public bool Arreter(){
+		public bool Arreter()
+		{
 
 			return true;
 		}
 
-		public bool Avancer(){
+		public bool Avancer()
+		{
 
 			return false;
 		}
 
-		public bool Demarrer(){
+		public bool Demarrer()
+		{ bool demarer = false;
+			if (sonMoteur.Demarrer() == false)
+            {
+				sonMoteur.Demarrer();
+				demarer = true;
+			}
+            else
+            {
+				demarer = false;
+			}
 
-			return false;
+			return demarer;
+
+            
+			
 		}
 
 	}//end Voiture

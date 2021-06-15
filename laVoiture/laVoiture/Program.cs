@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryPourLaVoiture;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace LaVoiture
     {
         static void Main(string[] args)
         {
+            Voiture cars = new Voiture();
+            cars.Demarrer();
+            
         }
     }
 }
