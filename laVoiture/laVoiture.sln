@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaVoiture", "laVoiture\LaVoiture.csproj", "{FD1309EB-F060-4D8F-A132-E30519E17031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryPourLaVoiture", "ClassLibraryPourLaVoiture\ClassLibraryPourLaVoiture.csproj", "{A093AB41-5883-4C63-B923-E2F0E0BF6E9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD1309EB-F060-4D8F-A132-E30519E17031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD1309EB-F060-4D8F-A132-E30519E17031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD1309EB-F060-4D8F-A132-E30519E17031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD1309EB-F060-4D8F-A132-E30519E17031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A093AB41-5883-4C63-B923-E2F0E0BF6E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A093AB41-5883-4C63-B923-E2F0E0BF6E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A093AB41-5883-4C63-B923-E2F0E0BF6E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A093AB41-5883-4C63-B923-E2F0E0BF6E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {200A5CD7-39A5-4D1D-B21C-9047E28E615E}
+	EndGlobalSection
+EndGlobal

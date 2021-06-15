@@ -71,18 +71,19 @@ namespace CodeBouteille
 
         public bool Ouvrir()
         {
+            bool ouvre = false;
             if (ouvert == false)
             {
-                ouvert = true;
-                return true;
+                ouvre =  true;
+                
             }
             else
             {
-                return false;
+                ouvre = false;
 
             }
 
-
+            return ouvre;
 
         }
 
