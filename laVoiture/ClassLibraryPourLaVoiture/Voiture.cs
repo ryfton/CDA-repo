@@ -45,25 +45,57 @@ namespace ClassLibraryPourLaVoiture
 			this.mesRoues = mesRoues;
 
 		}
-		//constructeur par recopie
-		public Voiture(Voiture _copieVoiture)
+        //constructeur par recopie
+        public Voiture(Voiture _copieVoiture)
         {
-			compteurEnKM = _copieVoiture.compteurEnKM;
-			sonMoteur = _copieVoiture.sonMoteur;
-			mesRoues = _copieVoiture.mesRoues;
+            this.compteurEnKM = _copieVoiture.compteurEnKM;
+            this.sonMoteur = new Moteur(_copieVoiture.sonMoteur);
+            this.mesRoues = new Dictionary<string, Roue>();
+            this.mesRoues.Add("roueMotriceAvtGauche", new Roue(_copieVoiture.mesRoues["roueMotriceAvtGauche"]));
+            this.mesRoues.Add("roueMotriceAvtDroite", new Roue(_copieVoiture.mesRoues["roueMotriceAvtDroite"]));
+            this.mesRoues.Add("roueARDroite", new Roue(_copieVoiture.mesRoues["roueARDroite"]));
+            this.mesRoues.Add("roueARGauche", new Roue(_copieVoiture.mesRoues["roueARGauche"]));
         }
+  //      public Voiture(Voiture _copieVoitureInter)
+		//	:this(_copieVoitureInter.compteurEnKM,
+		//		 (new Moteur (_copieVoitureInter.sonMoteur)),
+		//		 (new Dictionary<string, Roue>(_copieVoitureInter.mesRoues)))
+
+
+		//{
+
+  //      }
 	
 
 		public bool Arreter()
 		{
+			bool voitureArreter = false;
+            if (Avancer()==true)
+            {
+				
+
+            }
 
 			return true;
 		}
 
 		public bool Avancer()
 		{
+			bool fairAvancer=false;
+            if (Demarrer()== true && mesRoues["roueMotriceAvtGauche"].Tourner() == false&& mesRoues["roueMotriceAvtDroite"].Tourner()==false)
+			{
 
-			return false;
+				mesRoues["roueMotriceAvtGauche"].Tourner();
+				mesRoues["roueMotriceAvtDroite"].Tourner();
+				fairAvancer = true;
+            }
+            else
+            {
+				fairAvancer = true;
+
+			}
+
+			return fairAvancer;
 		}
 
 		public bool Demarrer()

@@ -13,6 +13,7 @@ namespace LaVoiture
         {
             Voiture cars = new Voiture();
             cars.Demarrer();
+            cars.Avancer();
             
         }
     }

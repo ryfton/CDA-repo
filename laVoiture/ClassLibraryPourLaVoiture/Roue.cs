@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace ClassLibraryPourLaVoiture
 {
-	public class Roue {
+	public  class Roue {
 
 		private int diametre;
         private bool tourne;
@@ -34,14 +34,25 @@ namespace ClassLibraryPourLaVoiture
 		//constructeur par recopie
 		public Roue(Roue _copieRoue)
         {
-			diametre = _copieRoue.diametre;
-			tourne = _copieRoue.tourne;
+			this.diametre = _copieRoue.diametre;
+			this.tourne = _copieRoue.tourne;
 
 		}
         
-		public bool Tourner(){
+		public bool Tourner()
+		{
+			bool entrainDeTourner = false;
+            if ( tourne== false )
+            {
+				tourne = true;
+				entrainDeTourner = true;
+            }
+            else
+            {
+				entrainDeTourner = false;
+			}
 
-			return false;
+			return entrainDeTourner;
 		}
 
 	}//end Roue

@@ -8,25 +8,35 @@
 
 namespace ClassLibraryPourLaVoiture
 {
-    public class Moteur {
+	public class Moteur {
 
 		private bool estDemarre;
 		private int nbCV;
 
-        public bool EstDemarre { get => estDemarre; }
-        public int NbCV { get => nbCV;}
+		public bool EstDemarre { get => estDemarre; }
+		public int NbCV { get => nbCV; }
 
 
 
-        //Constructeur par defaut
-        public Moteur()
-		{
-			estDemarre = false;
-			nbCV = 4;
+		//Constructeur par defaut
+		//public Moteur()
+		//{
+		//	estDemarre = false;
+		//	nbCV = 4;
 
-		}
-		// constructeur classique
-		public Moteur(bool estDeemarre, int nbCV)
+		//}
+
+        // interdependance
+		public Moteur()
+			:this(false,4)
+        {
+
+        }
+
+
+
+        // constructeur classique
+        public Moteur(bool estDeemarre, int nbCV)
 		{
 			this.estDemarre = estDeemarre;
 			this.nbCV = nbCV;
@@ -45,20 +55,29 @@ namespace ClassLibraryPourLaVoiture
 
 		public bool Demarrer()
 		{
-			bool demare=true ;
+			bool demare=false ;
             if (estDemarre==false)
             {
 				estDemarre = true;
 				demare = true;
 
+            }
+            else
+            {
+				demare = false;
 			}
 			return demare;
 		}
 
 		
-		public void Entrainer(Roue mesRoue)
+		public  void Entrainer(Roue mesRoue)
 		{
+			
+            if (estDemarre == true &&  mesRoue.Tourner()==false )
+            {
+				mesRoue.Tourner();
 
+			}
 		}
 
 	}//end Moteur
