@@ -54,6 +54,21 @@ namespace ClassLibraryPourLaVoiture
 
 			return entrainDeTourner;
 		}
+		public bool ArreterTourner()
+		{
+			bool arreterDeTourner = false;
+			if (tourne == true)
+			{
+				tourne = false;
+				arreterDeTourner = true;
+			}
+			else
+			{
+				arreterDeTourner = false;
+			}
+
+			return arreterDeTourner;
+		}
 
 	}//end Roue
 

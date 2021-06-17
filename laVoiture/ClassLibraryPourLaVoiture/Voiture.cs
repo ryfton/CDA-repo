@@ -56,7 +56,7 @@ namespace ClassLibraryPourLaVoiture
             this.mesRoues.Add("roueARDroite", new Roue(_copieVoiture.mesRoues["roueARDroite"]));
             this.mesRoues.Add("roueARGauche", new Roue(_copieVoiture.mesRoues["roueARGauche"]));
         }
-  //      public Voiture(Voiture _copieVoitureInter)
+        // public Voiture(Voiture _copieVoitureInter)
 		//	:this(_copieVoitureInter.compteurEnKM,
 		//		 (new Moteur (_copieVoitureInter.sonMoteur)),
 		//		 (new Dictionary<string, Roue>(_copieVoitureInter.mesRoues)))
@@ -64,36 +64,35 @@ namespace ClassLibraryPourLaVoiture
 
 		//{
 
-  //      }
+       // }
 	
 
 		public bool Arreter()
-		{
-			bool voitureArreter = false;
-            if (Avancer()==true)
-            {
-				
+        {
 
-            }
 
-			return true;
+
+			bool voitureArreter = this.sonMoteur.ArreterEntrainer(mesRoues["roueMotriceAvtGauche"], mesRoues["roueMotriceAvtDroite"]);
+
+
+			return voitureArreter;
 		}
 
 		public bool Avancer()
 		{
-			bool fairAvancer=false;
-            if (Demarrer()== true && mesRoues["roueMotriceAvtGauche"].Tourner() == false&& mesRoues["roueMotriceAvtDroite"].Tourner()==false)
+			bool fairAvancer= this.sonMoteur.Entrainer(mesRoues["roueMotriceAvtGauche"], mesRoues["roueMotriceAvtDroite"]);
+
+			/*if (Demarrer()== true && mesRoues["roueMotriceAvtGauche"].Tourner() == false&& mesRoues["roueMotriceAvtDroite"].Tourner()==false)
 			{
 
-				mesRoues["roueMotriceAvtGauche"].Tourner();
-				mesRoues["roueMotriceAvtDroite"].Tourner();
+				 sonMoteur.EntrainerRoues(mesRoues["roueMotriceAvtGauche"], mesRoues["roueMotriceAvtDroite"]);
 				fairAvancer = true;
             }
             else
             {
 				fairAvancer = true;
 
-			}
+			}*/
 
 			return fairAvancer;
 		}
@@ -114,6 +113,24 @@ namespace ClassLibraryPourLaVoiture
 
             
 			
+		}
+		public bool Eteindre()
+		{
+			bool eteinte = false;
+			if (sonMoteur.EteindreMoteur() == false)
+			{
+				sonMoteur.EteindreMoteur();
+				eteinte = true;
+			}
+			else
+			{
+				eteinte = false;
+			}
+
+			return eteinte;
+
+
+
 		}
 
 	}//end Voiture

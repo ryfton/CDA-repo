@@ -68,16 +68,46 @@ namespace ClassLibraryPourLaVoiture
 			}
 			return demare;
 		}
-
-		
-		public  void Entrainer(Roue mesRoue)
+		public bool EteindreMoteur()			
 		{
-			
-            if (estDemarre == true &&  mesRoue.Tourner()==false )
-            {
-				mesRoue.Tourner();
+			bool eteint = false;
+			if (estDemarre == true)
+			{
+				estDemarre = false;
+				eteint = true;
 
 			}
+			else
+			{
+				eteint = false;
+			}
+			return eteint;
+		}
+
+
+		public  bool Entrainer(Roue  maRoueMotrice1, Roue maRoueMotrice2)
+		{
+			bool entraine = false;
+            if (estDemarre == true )// && maRoueMotrice1.Tourner()==false && maRoueMotrice2.Tourner() == false)
+            {
+				bool entraineRoueMotrice1 = maRoueMotrice1.Tourner();
+				bool entraineRoueMotrice2 = maRoueMotrice2.Tourner();
+				entraine = entraineRoueMotrice1 && entraineRoueMotrice2;
+
+			}
+			return entraine;
+		}
+		public bool ArreterEntrainer(Roue maRoueMotrice1, Roue maRoueMotrice2)
+		{
+			bool arreterEntraine = false;
+			if (estDemarre == true)// && maRoueMotrice1.Tourner()==false && maRoueMotrice2.Tourner() == false)
+			{
+				bool arreterEntraineRoueMotrice1 = maRoueMotrice1.ArreterTourner();
+				bool arreterEntraineRoueMotrice2 = maRoueMotrice2.ArreterTourner();
+				arreterEntraine = arreterEntraineRoueMotrice1 && arreterEntraineRoueMotrice2;
+
+			}
+			return arreterEntraine;
 		}
 
 	}//end Moteur

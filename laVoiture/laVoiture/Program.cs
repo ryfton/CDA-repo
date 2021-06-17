@@ -14,7 +14,11 @@ namespace LaVoiture
             Voiture cars = new Voiture();
             cars.Demarrer();
             cars.Avancer();
-            
+            cars.Arreter();
+            cars.Avancer();
+            cars.Arreter();
+            cars.Eteindre();
+
         }
     }
 }
