@@ -83,24 +83,28 @@ namespace ClassLibraryLePoint
         }
         public void PermuterSymetrieOrigine()
         {
-            if (this.x > 0)
-            {
-               x = -(x);
+            float temp = this.y;
+            this.y = this.x;
+            this.x = temp;
 
-            }
-            else
-            {
-                x = +(x);
-            }
-            if (this.y > 0)
-            {
-                y = -(y);
+            //if (this.x > 0)/// hor sujet 
+            //{
+            //   x = -(x);
 
-            }
-            else
-            {
-                y = +-(y);
-            }
+            //}
+            //else
+            //{
+            //    x = +(x);
+            //}
+            //if (this.y > 0)
+            //{
+            //    y = -(y);
+
+            //}
+            //else
+            //{
+            //    y = +-(y);
+            //}
            
             
             
