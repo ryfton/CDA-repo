@@ -86,7 +86,7 @@ namespace CompteBancaire
             bool ok = false;
             if ((soldeCompte - _montant) > decouvertAutorise)
             {
-                soldeCompte -= _montant;
+                Debiter( _montant);
                 _autreCompte.Crediter(_montant);
                 ok = true;
             }
@@ -97,13 +97,8 @@ namespace CompteBancaire
             return ok;
         }
 
-        /// 
-        /// <param name="_autreCompte"></param>
-        public bool ComparerSoldeAutreCompte(CompteBancaire _autreCompte)
-        {
 
-            return false;
-        }
+
 
         /// 
         /// <param name="_autreCompte"></param>
