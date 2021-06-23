@@ -12,13 +12,14 @@ namespace LePoint
     {
         static void Main(string[] args)
         {
-            Point c = new Point();
-            c.IndiqueSaPosition();
-            c.Deplacer(10, 15);
-            Point b =c.ConstruireSymetrieOrdonnee("B");
-            b.IndiqueSaPosition();
-            b.PermuterSymetrieOrigine();
-            b.IndiqueSaPosition();
+            Point a= new Point();
+            Console.WriteLine(a.IndiqueSaPosition());
+            a.Deplacer(10, 15);
+            Point b = a.ConstruireSymetrieOrdonnee("B");
+            Console.WriteLine(b.IndiqueSaPosition());
+            b.PermuterParametreOrigine();
+            Point c = b.ConstruireSymetrieOrigine("C");
+            Console.WriteLine(c.IndiqueSaPosition());
 
         }
     }

@@ -22,6 +22,8 @@ namespace ClassLibraryLePoint
             x = 0;
             y = 0;
             nom = "A";
+
+
         }
         public Point(string _nom ,float _abscisse, float _ordonnee)
         {
@@ -32,12 +34,12 @@ namespace ClassLibraryLePoint
 
         public override string ToString()
         {
-            return "La Positions du point " + nom + " est abscisse de : " + x + " est ordonnée de : " + y;
+            return "La Positions du point " + nom + " est abscisse de : " + x + " et ordonnée de : " + y;
         }
 
-        public void IndiqueSaPosition() 
+        public string IndiqueSaPosition() 
         {
-           Console.WriteLine(ToString());
+           return ToString();
         }
         
        
@@ -74,14 +76,16 @@ namespace ClassLibraryLePoint
         {
             Point newPoint = new Point();
             newPoint.nom = _nom;
-            newPoint.x = -(this.x);
-            newPoint.y = -(this.y);
+            newPoint.Deplacer(-(this.x), -(this.y));                   
+          //newPoint.x = -(this.x);
+          //newPoint.y = -(this.y);
+
 
 
 
             return newPoint;
         }
-        public void PermuterSymetrieOrigine()
+        public void PermuterParametreOrigine()
         {
             float temp = this.y;
             this.y = this.x;
