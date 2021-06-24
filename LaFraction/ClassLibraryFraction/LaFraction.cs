@@ -138,7 +138,7 @@ namespace ClassLibraryFraction
 
 
         }
-        public void Reduire()
+        private void Reduire()
         {
 
             if (this.numerateur < 0 && this.denominateur < 0)
@@ -189,6 +189,13 @@ namespace ClassLibraryFraction
 
             f.Reduire();
             return f;
+        }
+        public Fraction FPlus(Fraction _uneFraction, Fraction _uneAutreFraction)
+        {
+           Fraction f = _uneFraction.Plus(_uneAutreFraction);
+            f.Reduire();
+            return f;
+
         }
 
 
