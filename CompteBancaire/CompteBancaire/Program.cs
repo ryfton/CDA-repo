@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassLibraryCompte;
 
 namespace CompteBancaire
 {
@@ -10,8 +11,8 @@ namespace CompteBancaire
     {
         static void Main(string[] args)
         {
-            CompteBancaire c = new CompteBancaire(0001, "franck", 1500, -1000);
-            CompteBancaire c2 = new CompteBancaire(0002, "Collet", 25000, -500);
+            Compte c = new Compte(0001, "franck", 1500, -1000);
+            Compte c2 = new Compte(0002, "Collet", 25000, -500);
             c.Transferer(10000, c2);
             Console.WriteLine(c.ToString());
             Console.WriteLine(c2.ToString());
@@ -24,6 +25,11 @@ namespace CompteBancaire
                 Console.WriteLine("inférieure");
             }
 
+            Banque az = new Banque("credit Mutuel","Mulhouse");
+            az.AjouteCompte(c2);
+            az.AjouteCompte(c);
+
+            Console.WriteLine(az.ToString());
         }
     }
 }

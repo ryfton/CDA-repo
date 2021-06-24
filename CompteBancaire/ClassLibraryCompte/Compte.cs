@@ -11,7 +11,7 @@
 
 namespace CompteBancaire
 {
-    public class CompteBancaire
+    public class Compte
     {
 
         private uint numeroCompte;
@@ -19,7 +19,7 @@ namespace CompteBancaire
         private int soldeCompte;
         private int decouvertAutorise;
 
-        public CompteBancaire()
+        public Compte()
         {
             numeroCompte = 0000;
             nomProprietaire = "Client";
@@ -37,7 +37,7 @@ namespace CompteBancaire
         /// <param name="_nomProprietaire"></param>
         /// <param name="_soldeCompte"></param>
         /// <param name="_decouvertAutorise"></param>
-        public CompteBancaire(uint _numeroCompte, string _nomProprietaire, int _soldeCompte, int _decouvertAutorise)
+        public Compte(uint _numeroCompte, string _nomProprietaire, int _soldeCompte, int _decouvertAutorise)
         {
             this.numeroCompte = _numeroCompte;
             this.nomProprietaire = _nomProprietaire;
@@ -81,7 +81,7 @@ namespace CompteBancaire
         /// 
         /// <param name="_montant"></param>
         /// <param name="_autreCompte"></param>
-        public bool Transferer(int _montant, CompteBancaire _autreCompte)
+        public bool Transferer(int _montant, Compte _autreCompte)
         {
             bool ok = false;
             if ((soldeCompte - _montant) > decouvertAutorise)
@@ -102,7 +102,7 @@ namespace CompteBancaire
 
         /// 
         /// <param name="_autreCompte"></param>
-        public bool SuperieurAutreCompte(CompteBancaire _autreCompte)
+        public bool SuperieurAutreCompte(Compte _autreCompte)
         {
             bool ok = false;
             if (soldeCompte > _autreCompte.soldeCompte)
