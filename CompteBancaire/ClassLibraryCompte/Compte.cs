@@ -52,7 +52,19 @@ namespace CompteBancaire
         public override string ToString()
         {
 
-            return "numéro : " + numeroCompte + " nom : " + nomProprietaire + " solde : " + soldeCompte + " découvert autorisé : " + decouvertAutorise;
+            //if (this==null)
+            //{
+            //    return "Null";
+            //}
+           // else
+            //{
+                return "Numéro : " + numeroCompte + ". Nom : " + nomProprietaire + ". Solde : " + soldeCompte + ". Découvert autorisé : " + decouvertAutorise;
+           // }
+            
+                
+            
+
+           
         }
 
         /// 
@@ -118,6 +130,10 @@ namespace CompteBancaire
             }
             return ok;
         }
+        
+        
+
+
 
     }//end CompteBancaire
 

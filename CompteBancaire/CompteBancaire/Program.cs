@@ -31,6 +31,21 @@ namespace CompteBancaire
             az.AjouteCompte(c);
             Compte cs = az.CompteSup(az.MesComptes);
             Console.WriteLine("Le Compte avec le plus grand solde est : "+cs.ToString());
+            Compte recherche =az.RendCompte(3);
+            if (recherche==null)
+            {
+                Console.WriteLine("Le compte rechercher est : Null");
+
+            }
+            else
+            {
+                Console.WriteLine("Le compte rechercher est : " + recherche.ToString());
+            }
+            
+            
+                
+            
+            
             Console.WriteLine(az.ToString());
         }
     }

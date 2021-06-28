@@ -97,6 +97,37 @@ namespace ClassLibraryCompte
             
                 return c;
         }
+        public Compte RendCompte(uint _numeroDeCompte )
+        {
+            bool trouver=false ;
+            Compte chercher = new Compte();
+
+
+            foreach (var item in mesComptes)
+            {
+                if (item != null && item.NumeroCompte == _numeroDeCompte)
+                {
+                    chercher = item;
+                    trouver = true;
+                }
+           
+            }
+            if (trouver ==true)
+            {
+
+            
+            
+                return chercher;
+
+
+            }
+            else
+            {
+                return null;
+            }
+
+            
+        }
 
 
 
