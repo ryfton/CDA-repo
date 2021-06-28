@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClassLibraryCompte;
 
+
 namespace CompteBancaire
 {
     class Program
@@ -28,7 +29,8 @@ namespace CompteBancaire
             Banque az = new Banque("credit Mutuel","Mulhouse");
             az.AjouteCompte(c2);
             az.AjouteCompte(c);
-
+            Compte cs = az.CompteSup(az.MesComptes);
+            Console.WriteLine("Le Compte avec le plus grand solde est : "+cs.ToString());
             Console.WriteLine(az.ToString());
         }
     }

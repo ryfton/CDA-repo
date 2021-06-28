@@ -19,6 +19,9 @@ namespace CompteBancaire
         private int soldeCompte;
         private int decouvertAutorise;
 
+        public uint NumeroCompte { get => numeroCompte; }
+        public int SoldeCompte { get => soldeCompte;  }
+
         public Compte()
         {
             numeroCompte = 0000;
@@ -105,7 +108,7 @@ namespace CompteBancaire
         public bool SuperieurAutreCompte(Compte _autreCompte)
         {
             bool ok = false;
-            if (soldeCompte > _autreCompte.soldeCompte)
+            if (this.soldeCompte > _autreCompte.soldeCompte)
             {
                 ok = true;
             }
