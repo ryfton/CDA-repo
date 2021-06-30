@@ -30,7 +30,7 @@ namespace CompteBancaire
             az.AjouteCompte(c2);
             az.AjouteCompte(c);
             Compte cs = az.CompteSup(az.MesComptes);
-            Console.WriteLine("Le Compte avec le plus grand solde est : "+cs.ToString());
+            Console.WriteLine("Le Compte avec le plus grand solde est : " + cs);//.ToString());
             Compte recherche =az.RendCompte(3);
             if (recherche==null)
             {
@@ -39,14 +39,24 @@ namespace CompteBancaire
             }
             else
             {
-                Console.WriteLine("Le compte rechercher est : " + recherche.ToString());
+                Console.WriteLine("Le compte rechercher est : " + recherche);//.ToString()) ;
             }
-            
-            
-                
-            
-            
-            Console.WriteLine(az.ToString());
+            if (az.Transfere(1,2,1000))
+            {
+                Console.WriteLine("transfert effectué");
+            }
+            else
+            {
+                Console.WriteLine("transfert impossible");
+            }
+
+
+
+
+
+
+
+            Console.WriteLine(az);//.ToString());
         }
     }
 }

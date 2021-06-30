@@ -3,14 +3,14 @@
   <Class Name="CompteBancaire.Compte">
     <Position X="6.75" Y="2" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAEAAICAAgAAAAAABAEAAAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAEAEAAICAAgAAAAAgBAEAAAQAAQAAAA=</HashCode>
       <FileName>Compte.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassLibraryCompte.Banque">
     <Position X="2.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAIUAAASKAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAIUAAASKQAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Banque.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>

@@ -21,6 +21,7 @@ namespace CompteBancaire
 
         public uint NumeroCompte { get => numeroCompte; }
         public int SoldeCompte { get => soldeCompte;  }
+        public int DecouvertAutorise { get => decouvertAutorise; }
 
         public Compte()
         {

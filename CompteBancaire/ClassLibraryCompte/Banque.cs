@@ -66,26 +66,19 @@ namespace ClassLibraryCompte
 
             for (int i = 0; i < this.nbComptes; i++)
             {
-
-              
-                
-
-                
+                              
                 foreach (var item in mesComptes)
                 {
                     if (item!=null)
                     {
-                        ok = mesComptes[i].SuperieurAutreCompte(item);
+                        ok = mesComptes[i].SuperieurAutreCompte(item);//if (mesComptes[i].SuperieurAutreCompte(mesComptes[i]))
+                                                                      //{
+
+                                                                       //}
                     }
-                  
+
                 }
-                
-
-                //if (mesComptes[i].SuperieurAutreCompte(mesComptes[i]))
-                //{
-
-                //}
-
+                                
                 if (ok == true)
                 {
                     c = mesComptes[i];
@@ -97,7 +90,7 @@ namespace ClassLibraryCompte
             
                 return c;
         }
-        public Compte RendCompte(uint _numeroDeCompte )
+        public Compte RendCompte(int _numeroDeCompte )
         {
             bool trouver=false ;
             Compte chercher = new Compte();
@@ -127,6 +120,21 @@ namespace ClassLibraryCompte
             }
 
             
+        }
+        public bool Transfere(int _compteDebiter,int _compteCrediter,int _montant)
+        {
+            bool ok;
+            Compte debiter = RendCompte(_compteDebiter);
+            Compte crediter = RendCompte(_compteCrediter);
+            if (debiter.Transferer(_montant, crediter)==true)
+            {
+                ok = true;
+            }
+            else
+            {
+                ok = false;
+            }
+            return ok;
         }
 
 
