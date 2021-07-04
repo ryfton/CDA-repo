@@ -9,21 +9,23 @@ namespace ClassLibrary421
     {
         private List<De> mes3Des;
         private const int NB_DE_LANCER_MAX = 3;
-        private int nbDeLancerCourant;
-        
+        private int nbDeLancerRestant;
+
+        public List<De> Mes3Des { get => mes3Des; }
 
         public Manche()
         {
             List<De> troisDe = new List<De>();
-            De d1 = new De(1);
-            De d2 = new De(2);
-            De d3 = new De(3);
+            De d1 = new De();
+            De d2 = new De();
+            De d3 = new De();
             troisDe.Add(d1);
             troisDe.Add(d2);
             troisDe.Add(d3);
             mes3Des = troisDe;
-            nbDeLancerCourant = 3;
-
+            nbDeLancerRestant = 3;
+            TrierLesDes(mes3Des);
+            nbDeLancerRestant -= 1;
 
         }
 
@@ -35,58 +37,43 @@ namespace ClassLibrary421
                 {
                     mes3Des[i].SeJeter();
                 }
-                nbDeLancerCourant -= 1;
-
+                nbDeLancerRestant -= 1;
+                TrierLesDes(mes3Des);
             }
            
             
         }
 
-        public void Lancer(int _numeroDe1,int _numeroDe2 )
-        {
+        public void Lancer(int  _unDe, int _AutreDe)
+        { 
             if (PeutLancer() == true)
             {
-                for (int i = 0; i < mes3Des.Count; i++)
-                {
-                    if (mes3Des[i].NumeroDe==_numeroDe1)
-                    {
-                        mes3Des[i].SeJeter();
-                    }
-                    if (mes3Des[i].NumeroDe == _numeroDe2)
-                    {
-                        mes3Des[i].SeJeter();
-                    }
-                    
-                }
-                nbDeLancerCourant -= 1;
+                 mes3Des[_unDe - 1].SeJeter();
+                 mes3Des[_AutreDe - 1].SeJeter();
 
+
+                nbDeLancerRestant -= 1;
+                TrierLesDes(mes3Des);
             }
 
 
 
            
         }
-        public void Lancer(int _numeroDe)
+        public void Lancer(int _unDe)
         {
             if (PeutLancer() == true)
             {
-                for (int i = 0; i < mes3Des.Count; i++)
-                {
-                    if (mes3Des[i].NumeroDe == _numeroDe)
-                    {
-                        mes3Des[i].SeJeter();
-                    }
-                    
-                }
-                nbDeLancerCourant -= 1;
-
+                mes3Des[_unDe-1].SeJeter();
+                nbDeLancerRestant -= 1;
+                TrierLesDes(mes3Des);
             }
            
         }
         private bool PeutLancer()
         {
             bool ok = false;
-            if (nbDeLancerCourant<=0)
+            if (nbDeLancerRestant<=0 )
             {
                 ok = false;
             }
@@ -100,35 +87,48 @@ namespace ClassLibrary421
         public bool MancheGagner()
         {
             bool ok = false;
+            if (  SuiteGagante()==true)
+            {
+                ok = true;
+            }
+            return ok;
+        }
+        public bool SuiteGagante()
+        {
+            bool ok = false;
+            if (mes3Des[0].Valeur==4 && mes3Des[1].Valeur == 2&& mes3Des[2].Valeur == 1)
+            {
+                ok = true;
+
+            }
             return ok;
         }
         public string  RenvoieRepresentationDes()
         {
-            return "";
+            return this.ToString();
         }
 
         public override string ToString()
         {
-            return "les dés son lancer vous avez "+mes3Des[0].Valeur+" "+mes3Des[1].Valeur +" " + mes3Des[2].Valeur ;
+            return "les dés son lancer vous avez :\n dé numero 1 ["+mes3Des[0].Valeur+ "]\n dé numero 2 [" + mes3Des[1].Valeur + "]\n dé numero 3 [" + mes3Des[2].Valeur+"]" ;
         }
         private void TrierLesDes(List<De> _mesDes)
         {
             _mesDes.Sort();
+            _mesDes.Reverse();
 
         }
-        //public List<De> Commencer()
-        //{
-        //    List<De> troisDes = new List<De>();
-        //    De d1 = new De(1);
-        //    De d2 = new De(2);
-        //    De d3 = new De(3);
-        //    troisDes.Add(d1);
-        //    troisDes.Add(d2);
-        //    troisDes.Add(d3);
-        //    return troisDes;
+        public bool FinDeManche()
+        {
+            bool ok = false;
+            if (PeutLancer() == false)
+            {
+                ok = true;
+            }
+            return ok;
 
-
-
-        //}
+            
+        }
+        
     }
 }

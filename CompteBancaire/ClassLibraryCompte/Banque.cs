@@ -17,25 +17,27 @@ namespace ClassLibraryCompte
 
         public Compte[] MesComptes { get => mesComptes;  }
 
-        public Banque(string _nom)
+        public Banque(string _nom,Compte[] _comptes,int _nbcompte)
         {
-            mesComptes = new Compte[10];
+            mesComptes = _comptes;
 
             this.nom = _nom;
-            this.nbComptes = 0;
+            this.nbComptes = _nbcompte;
 
         }
 
         public void AjouteCompte(Compte _unCompte)
         {
-            this.mesComptes[nbComptes] = _unCompte;
+            this.mesComptes[nbComptes] = this.AjouteCompte(121,"kk",12,-45);
             this.nbComptes++;
 
         }
-        public void AjouteCompte(uint _num, string _nom, int _solde, int _decouvertAurise)
+        private Compte AjouteCompte(uint _num, string _nom, int _solde, int _decouvertAurise)
         {
-            this.mesComptes[0] = (new Compte(_num, _nom, _solde, _decouvertAurise));
-            this.nbComptes++;
+            Compte c = new Compte(_num,  _nom, _solde,  _decouvertAurise);
+            //this.mesComptes[0] = (new Compte(_num, _nom, _solde, _decouvertAurise));
+            // this.nbComptes++;
+            return c;
         }
         public Banque(string _nom, string _ville)
         {

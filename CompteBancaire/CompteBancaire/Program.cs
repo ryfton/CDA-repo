@@ -49,6 +49,9 @@ namespace CompteBancaire
             {
                 Console.WriteLine("transfert impossible");
             }
+            int nbcompte = 0;
+            Compte[] mescompte = new Compte[nbcompte];
+            Banque i = new Banque("mulouse", mescompte, nbcompte);
 
 
 

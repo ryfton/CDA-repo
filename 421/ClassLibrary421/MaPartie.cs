@@ -9,31 +9,103 @@ namespace ClassLibrary421
     public class MaPartie
     {
         private Manche maMancheCourante;
-        private int ScoreInitial;
+        private int scoreInitial;
         private int nbMancheAjouer;
-        private int scorCourant;
+        private int scorRestant;
 
-        
+        public int NbMancheAjouer { get => nbMancheAjouer; }
+
         public MaPartie(int _nbMancheAjouer)
         {
             nbMancheAjouer = _nbMancheAjouer;
-            ScoreInitial = _nbMancheAjouer * 10;
+            scoreInitial = _nbMancheAjouer * 10;
+            scorRestant = _nbMancheAjouer * 10;
+            
 
         }
 
         public void Commencer()
         {
-            //maMancheCourante.Commencer();
-        }
+            Manche firstManche = new Manche();
+            maMancheCourante = firstManche;
+            nbMancheAjouer -= 1;
 
-        public void EstGagne()
+        }
+        public bool MancheTerminer()
         {
-            throw new System.NotImplementedException();
+            bool ok = false;
+            if (maMancheCourante.FinDeManche()==true)
+            {
+                if (maMancheCourante.MancheGagner() == true)
+                {
+                    scorRestant += 30;
+                }
+                else
+                {
+                    scorRestant -= 10;
+
+                }
+                ok = true;
+                
+                
+                
+            }
+            return ok;
+        }
+        public bool EstGagne()
+        {
+            bool ok=false;
+
+            if (nbMancheAjouer<=0 && scorRestant>0&& maMancheCourante.FinDeManche()==true)
+            {
+                ok = true;
+
+            }
+            return ok;
         }
 
         public void LancerLes3Des()
         {
-            throw new System.NotImplementedException();
+            if (EstGagne()==false && PeutJouer()==true)
+            {
+                maMancheCourante.LancerLes3Des();
+            }
+            
+        }
+        public void Lancer(int _unDe, int _AutreDe)
+        {
+            if (EstGagne() == false && PeutJouer() == true)
+            {
+                maMancheCourante.Lancer(_unDe, _AutreDe);
+            }
+           
+        }
+        public void Lancer(int _unDe)
+        {
+            if (EstGagne() == false && PeutJouer() == true)
+            {
+                maMancheCourante.Lancer(_unDe);
+            }
+            
+        }
+        public bool PeutJouer()
+        {
+            bool ok = false;
+            if (nbMancheAjouer<=0 && scorRestant<=0)
+            {
+                ok = false;
+            }
+            else
+            {
+                ok = true;
+            }
+            return ok;
+
+        }
+        public override string ToString()
+        {
+            
+            return maMancheCourante.ToString();
         }
     }
 }

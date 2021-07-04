@@ -11,14 +11,14 @@ namespace ClassLibrary421
         
         private int valeur;
         private const int NB_FACE = 6;
-        private int numeroDe;
+        
 
         public int Valeur { get => valeur;}
-        public int NumeroDe { get => numeroDe;}
+        
 
-        public De(int _numero)
+        public De()
         {
-             numeroDe = _numero;
+             
              valeur=Alea.Instance().Nouveau(1,NB_FACE);
         }
 
@@ -28,7 +28,7 @@ namespace ClassLibrary421
         }
         public override string ToString()
         {
-            return "Le De numero "+numeroDe+ " affiche : " + valeur;
+            return "Le De affiche : " + valeur;
         }
 
         public int CompareTo(De other)
