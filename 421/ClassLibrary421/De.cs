@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary421
 {
-    public class De: IComparable<De>,IComparable
+    internal class De: IComparable<De>,IComparable
     {
         
         private int valeur;

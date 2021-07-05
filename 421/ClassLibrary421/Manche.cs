@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary421
 {
-    public class Manche
+    internal class Manche
     {
         private List<De> mes3Des;
         private const int NB_DE_LANCER_MAX = 3;

@@ -56,7 +56,7 @@ namespace ClassLibrary421
         {
             bool ok=false;
 
-            if (nbMancheAjouer<=0 && scorRestant>0&& maMancheCourante.FinDeManche()==true)
+            if (nbMancheAjouer <= 0 && scorRestant > 0 && maMancheCourante.FinDeManche()==true)
             {
                 ok = true;
 
@@ -106,6 +106,11 @@ namespace ClassLibrary421
         {
             
             return maMancheCourante.ToString();
+        }
+        public int AfficherScore()
+        {
+            int score= scorRestant;
+            return score;
         }
     }
 }

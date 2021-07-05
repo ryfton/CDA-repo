@@ -15,10 +15,11 @@ namespace _421
             bool relancerManche = false;
             bool passerManche = false;
             bool passerPartie = false;
+            int score=0;
 
 
 
-
+            
             Console.WriteLine("veuillez saisir le nombre de manche que vous voulez jouer:");
             nbManche = int.Parse(Console.ReadLine());
 
@@ -37,13 +38,14 @@ namespace _421
                     Console.Clear();
                     firstGame.Commencer();
                     Console.WriteLine("Début de la manche il vous reste " + firstGame.NbMancheAjouer + " manche a jouer.\n");
+                    Console.WriteLine("Le score est de : "+(score=firstGame.AfficherScore())+ "\n");
                     relancerManche = false;
                     Console.WriteLine(firstGame.ToString());
 
 
 
 
-                    while (relancerManche == false && firstGame.NbMancheAjouer >= 0&& firstGame.MancheTerminer()==false)
+                    while (relancerManche == false && firstGame.NbMancheAjouer >= 0 && firstGame.MancheTerminer() == false)
                     {
                         int deRelancer;
                         int dé1, dé2;
@@ -54,7 +56,7 @@ namespace _421
                         if (boucleRelance == "O")
                         {
 
-                            
+
 
                             Console.WriteLine("Voulez vous relancer les trois dés O/N ? ");
                             string reponse2 = (Console.ReadLine());
@@ -67,13 +69,13 @@ namespace _421
                             }
                             else
                             {
-                                
+
                                 Console.WriteLine("Ou voulez vous relancer deux dés  O/N ? ");
                                 string reponse3 = (Console.ReadLine());
                                 reponse3 = reponse3.ToUpper();
                                 if (reponse3 == "O")
                                 {
-                                   
+
                                     Console.WriteLine("Quelle dé voulez vous relancer à saisir sous la forme: 1/2");
                                     string[] deuxDeRelancer = Console.ReadLine().Split('/');
                                     int.TryParse(deuxDeRelancer[0], out dé1);
@@ -82,7 +84,7 @@ namespace _421
                                 }
                                 else
                                 {
-                                   
+
                                     Console.WriteLine("Si non quelle dé voulez vous relancer  :1/2/3");
                                     deRelancer = int.Parse(Console.ReadLine());
                                     if (deRelancer == 1)
@@ -104,7 +106,7 @@ namespace _421
 
 
                             }
-                           
+
                         }
                         else
                         {
@@ -113,10 +115,10 @@ namespace _421
                         Console.WriteLine(firstGame.ToString());
                         if (firstGame.MancheTerminer() == true || passerManche == true)
                         {
-                            
+
                             relancerManche = true;
                             Console.WriteLine("Manche terminer");
-                            
+
                         }
 
                     }
