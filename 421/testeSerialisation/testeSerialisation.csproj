@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7715A033-DCE8-430D-8AB7-BC5246BE15B0}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary421</RootNamespace>
-    <AssemblyName>ClassLibrary421</AssemblyName>
+    <ProjectGuid>{D38255AC-E0EE-48F2-BDA2-9AA0AFD6F028}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>testeSerialisation</RootNamespace>
+    <AssemblyName>testeSerialisation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,9 +22,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\ClassLibrary421.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,19 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alea.cs" />
-    <Compile Include="De.cs" />
-    <Compile Include="Manche.cs" />
-    <Compile Include="MaPartie.cs" />
+    <Compile Include="Serial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\421\421.csproj">
+      <Project>{fe283069-59db-4c1d-9084-4b6bc6efc154}</Project>
+      <Name>421</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary421\ClassLibrary421.csproj">
+      <Project>{7715a033-dce8-430d-8ab7-bc5246be15b0}</Project>
+      <Name>ClassLibrary421</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibraryjoeur\ClassLibraryjoeur.csproj">
       <Project>{cc6f7843-cb34-4a8c-a30d-92076e25560e}</Project>
       <Name>ClassLibraryjoeur</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrarySerialisation\ClassLibrarySerialisation.csproj">
+      <Project>{3f5990ea-fb58-44ba-8c26-e2762495ff90}</Project>
+      <Name>ClassLibrarySerialisation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

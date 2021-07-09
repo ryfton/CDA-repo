@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ClassLibrary421
 {
     public class MaPartie
@@ -12,8 +13,10 @@ namespace ClassLibrary421
         private int scoreInitial;
         private int nbMancheAjouer;
         private int scorRestant;
+         
 
         public int NbMancheAjouer { get => nbMancheAjouer; }
+        
 
         public MaPartie(int _nbMancheAjouer)
         {
@@ -34,7 +37,7 @@ namespace ClassLibrary421
         public bool MancheTerminer()
         {
             bool ok = false;
-            if (maMancheCourante.FinDeManche()==true)
+            if (maMancheCourante.FinDeManche()==true||maMancheCourante.MancheGagner()==true)
             {
                 if (maMancheCourante.MancheGagner() == true)
                 {
@@ -112,5 +115,10 @@ namespace ClassLibrary421
             int score= scorRestant;
             return score;
         }
+        public void AjouterJoueur()
+        {
+            
+        }
+        
     }
 }

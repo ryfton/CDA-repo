@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\421.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,6 +54,14 @@
     <ProjectReference Include="..\ClassLibrary421\ClassLibrary421.csproj">
       <Project>{7715a033-dce8-430d-8ab7-bc5246be15b0}</Project>
       <Name>ClassLibrary421</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibraryjoeur\ClassLibraryjoeur.csproj">
+      <Project>{cc6f7843-cb34-4a8c-a30d-92076e25560e}</Project>
+      <Name>ClassLibraryjoeur</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrarySerialisation\ClassLibrarySerialisation.csproj">
+      <Project>{3f5990ea-fb58-44ba-8c26-e2762495ff90}</Project>
+      <Name>ClassLibrarySerialisation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
