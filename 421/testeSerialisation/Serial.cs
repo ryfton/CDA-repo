@@ -1,4 +1,5 @@
 ﻿using ClassLibraryjoeur;
+using ClassLibrarySerialisation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace testeSerialisation
 {
+    [Serializable]
     class Serial
     {
         static void Main(string[] args)
@@ -49,7 +51,14 @@ namespace testeSerialisation
             {
                 Console.WriteLine("Joueur : "+ lesDixPremier[i].Nom+".  score : "+ lesDixPremier[i].Scores);
             }
-             
+            Serialise.Sauvegarder(joueursTes);
+            ListedeJoueurs recuperationJoueur =Serialise.Ouvrire();
+            Console.WriteLine();
+            Console.WriteLine();
+            for (int i = 0; i < ct; i++)
+            {
+                Console.WriteLine("Joueur : " + recuperationJoueur[i].Nom + ".  score : " + recuperationJoueur[i].Scores);
+            }
 
             Console.ReadKey();
         }

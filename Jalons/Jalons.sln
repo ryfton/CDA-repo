@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jalons", "Jalons\Jalons.csproj", "{96F0132A-79D3-4004-BD6A-1906C915BCE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JalonsB", "JalonsB\JalonsB.csproj", "{9F55BD68-1FC3-4D94-81D7-C14E02698A3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96F0132A-79D3-4004-BD6A-1906C915BCE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F0132A-79D3-4004-BD6A-1906C915BCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F0132A-79D3-4004-BD6A-1906C915BCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F0132A-79D3-4004-BD6A-1906C915BCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F55BD68-1FC3-4D94-81D7-C14E02698A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F55BD68-1FC3-4D94-81D7-C14E02698A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F55BD68-1FC3-4D94-81D7-C14E02698A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F55BD68-1FC3-4D94-81D7-C14E02698A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41BD0FE9-263C-47E2-A2B8-7BF0E3746E79}
+	EndGlobalSection
+EndGlobal
