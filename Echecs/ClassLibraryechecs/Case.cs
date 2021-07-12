@@ -15,19 +15,19 @@ namespace JeuxEchecs {
 		private string saCouleur;
 		private string SaPosition;
 
-		public Case(){
+		public Case()
+		{
 
 		}
 
-		~Case(){
-
-		}
-
-		public virtual void Dispose(){
-
-		}
+		
 
 		public bool EstLibre(){
+
+            if ()
+            {
+
+            }
 
 			return false;
 		}

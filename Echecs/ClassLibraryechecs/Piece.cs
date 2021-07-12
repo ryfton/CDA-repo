@@ -12,8 +12,9 @@
 namespace JeuxEchecs {
 	public abstract class Piece {
 
-		private bool couleur = true=blanc,false=noir;
+		private string couleur;
 		private string nomPieces;
+		private string saPosition;
 
 		public Piece(){
 
