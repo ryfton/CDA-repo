@@ -32,22 +32,36 @@ namespace JalonsB
         {
             
             int[] elementSuivants = new int[_nombre.Length];
+            //for (int i = 0; i < _nombre.Length; i++)
+            //{
+            //    int nombreDeCase = 0;
+
+            //    foreach (var item in _nombre)
+            //    {
+                    
+            //        if (_nombre[i].CompareTo(item) < 0 )
+            //        {
+            //            nombreDeCase++;
+            //            elementSuivants[i] = nombreDeCase;
+            //        }
+                 
+            //    }
+                
+                
+            //}
             for (int i = 0; i < _nombre.Length; i++)
             {
                 int nombreDeCase = 0;
-
-                foreach (var item in _nombre)
+                for (int j = _nombre[i]; j < _nombre.Length-1; j++)
                 {
-                    
-                    if (_nombre[i].CompareTo(item) < 0 )
+                    if (_nombre[i].CompareTo(_nombre[j]) < 0)
                     {
                         nombreDeCase++;
                         elementSuivants[i] = nombreDeCase;
                     }
-                 
+
                 }
-                
-                
+
             }
             return elementSuivants;
         }
