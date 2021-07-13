@@ -14,6 +14,8 @@ namespace Echecs
         {
             StruCaseCharInt positionTourBlancheGauche = new StruCaseCharInt('a',1);
             Tour tourBlancheGauche = new Tour("blanche","Tour", positionTourBlancheGauche);
+            StruCaseCharInt pca1 = new StruCaseCharInt('a', 1);
+            Case a1 = new Case(pca1, "noir");
 
             
         }
