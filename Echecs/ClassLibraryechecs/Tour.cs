@@ -3,19 +3,17 @@
 
 
 
+using ClassLibraryechecs;
 using JeuxEchecs;
 namespace JeuxEchecs {
 	public class Tour : Piece {
+		
+		public Tour(string _couleur ,string _nomPiece,StruCaseCharInt _saPosition)
+			: base(_couleur, _nomPiece, _saPosition)
+		{
+			
 
-		public Tour(){
-
-		}
-
-		~Tour(){
-
-		}
-
-		public override void Dispose(){
+			
 
 		}
 

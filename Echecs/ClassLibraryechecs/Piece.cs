@@ -9,45 +9,40 @@
 
 
 
+using ClassLibraryechecs;
+
 namespace JeuxEchecs {
 	public abstract class Piece {
 
-		private bool couleur;
+		private string couleur;
+
 		private string nomPieces;
+		private StruCaseCharInt saPosition;
 
-		public Piece(){
+		public Piece(string _couleur,string _nomPieces, StruCaseCharInt _saPosition)
+			
+		{
+		
 
+			couleur = _couleur;
+			nomPieces = _nomPieces;
+			saPosition = _saPosition;
+			
+
+			
 		}
 
-		~Piece(){
+        public StruCaseCharInt SaPosition { get => saPosition;  }
 
-		}
+        public abstract bool EstSurEchiquier();
 
-		public virtual void Dispose(){
+		public abstract bool Manger();
 
-		}
-
-		public bool EstSurEchiquier(){
-
-			return false;
-		}
-
-		public bool Manger(){
-
-			return false;
-		}
-
-		public bool PeutSeDeoplacer(){
-
-			return false;
-		}
+		public abstract bool PeutSeDeoplacer();
 
 		public abstract bool SeDeplacer();
 
-		public bool SeFaireManger(){
-
-			return false;
-		}
+		public abstract bool SeFaireManger();
 
 	}//end Piece
 

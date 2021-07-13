@@ -10,23 +10,20 @@
 
 
 using JeuxEchecs;
+using System.Collections.Generic;
+
 namespace JeuxEchecs {
 	public class Echiquier {
 
-		private List<Case> sesCases;
-		private List<Piece> sesPieces;
+		private Case[,] sesCases;
+		private Piece[,] sesPieces;
 
 		public Echiquier(){
 
 		}
 
-		~Echiquier(){
 
-		}
-
-		public virtual void Dispose(){
-
-		}
+		
 
 		public bool Initialiser(){
 

@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryechecs\ClassLibraryechecs.csproj">
+      <Project>{2001e880-90d2-45dc-acf3-0128499d1353}</Project>
+      <Name>ClassLibraryechecs</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
