@@ -26,6 +26,7 @@ namespace Echecs
             Case d1 = new Case(pcd1, "blanche");
             string essai;
             string essai2;
+            string essai3;
 
         }
     }
