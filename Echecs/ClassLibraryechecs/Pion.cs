@@ -17,14 +17,6 @@ namespace JeuxEchecs {
 
 		}
 
-		~Pion(){
-
-		}
-
-		public override void Dispose(){
-
-		}
-
 		public override bool EstSurEchiquier(){
 
 			return false;

@@ -50,6 +50,7 @@
     <Compile Include="Pion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roi.cs" />
+    <Compile Include="StruCaseCharInt.cs" />
     <Compile Include="Tour.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
