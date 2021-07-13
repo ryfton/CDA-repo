@@ -24,7 +24,7 @@ namespace Echecs
             Case c1 = new Case(pcc1, "noire");
             StruCaseCharInt pcd1 = new StruCaseCharInt('d', 1);
             Case d1 = new Case(pcd1, "blanche");
-
+            string essai;
 
         }
     }
