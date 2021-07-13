@@ -86,7 +86,7 @@ namespace PenduV
                     //else if (i != 0 || i != motFlag.Count - 1 )  
                     //    {
                     //         Console.Write('_');
-                    //    }
+                   
                     Console.Write (motJeux[i]);
 
                 }
