@@ -15,6 +15,7 @@ namespace JeuxEchecs {
 	public abstract class Piece {
 
 		private string couleur;
+
 		private string nomPieces;
 		private StruCaseCharInt saPosition;
 
