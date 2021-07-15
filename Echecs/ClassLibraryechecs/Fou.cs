@@ -9,23 +9,23 @@
 
 
 
+using ClassLibraryechecs;
 using JeuxEchecs;
 namespace JeuxEchecs {
 	public class Fou : Piece {
 
-		public Fou(){
+		public Fou(string _couleur, string _nomPiece, StruCaseCharInt _saPosition)
+			: base(_couleur, _nomPiece, _saPosition)
+		{
 
 		}
 
-		~Fou(){
+		
 
-		}
+		
 
-		public override void Dispose(){
-
-		}
-
-		public override bool EstSurEchiquier(){
+		public override bool EstSurEchiquier(Case _uneCase)
+		{
 
 			return false;
 		}

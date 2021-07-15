@@ -9,25 +9,21 @@
 
 
 
+using ClassLibraryechecs;
 using JeuxEchecs;
 namespace JeuxEchecs {
 	public class Dame : Piece {
 
 		private string Couleur;
 
-		public Dame(){
+		public Dame(string _couleur, string _nomPiece, StruCaseCharInt _saPosition)
+			: base(_couleur, _nomPiece, _saPosition)
+		{
 
 		}
 
-		~Dame(){
-
-		}
-
-		public override void Dispose(){
-
-		}
-
-		public override bool EstSurEchiquier(){
+		public override bool EstSurEchiquier(Case _uneCase)
+		{
 
 			return false;
 		}

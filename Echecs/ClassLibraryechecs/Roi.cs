@@ -9,23 +9,19 @@
 
 
 
+using ClassLibraryechecs;
 using JeuxEchecs;
 namespace JeuxEchecs {
 	public class Roi : Piece {
 
-		public Roi(){
+		public Roi(string _couleur, string _nomPiece, StruCaseCharInt _saPosition)
+			: base(_couleur, _nomPiece, _saPosition)
+		{
 
 		}
-
-		~Roi(){
-
-		}
-
-		public override void Dispose(){
-
-		}
-
-		public override bool EstSurEchiquier(){
+				
+		public override bool EstSurEchiquier(Case _uneCase)
+		{
 
 			return false;
 		}

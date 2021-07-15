@@ -17,7 +17,13 @@ namespace JeuxEchecs {
 
 		}
 
-		public override bool EstSurEchiquier(){
+		public override bool EstSurEchiquier(Case _uneCase)
+        {
+            if (this.SaPosition==_uneCase.SaPosition)
+            {
+
+            }
+			
 
 			return false;
 		}
