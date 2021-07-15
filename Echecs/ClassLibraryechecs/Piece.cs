@@ -28,13 +28,14 @@ namespace JeuxEchecs {
 			nomPieces = _nomPieces;
 			saPosition = _saPosition;
 			
+			
 
 			
 		}
 
         public StruCaseCharInt SaPosition { get => saPosition;  }
 
-        public abstract bool EstSurEchiquier();
+        public abstract bool EstSurEchiquier(Case _uneCase);
 
 		public abstract bool Manger();
 

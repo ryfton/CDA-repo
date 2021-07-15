@@ -9,16 +9,19 @@
 
 
 
+using ClassLibraryechecs;
 using JeuxEchecs;
 using System.Collections.Generic;
 
 namespace JeuxEchecs {
 	public class Echiquier {
 
-		private Case[,] sesCases;
+		private Case[] sesCases;
 		private Piece[,] sesPieces;
 
-		public Echiquier(){
+		public Echiquier()
+		{
+			
 
 		}
 
@@ -34,7 +37,228 @@ namespace JeuxEchecs {
 
 			return false;
 		}
+		public void RemplirEchiquierDeCase()
+        {
+            //création des 64 cases
 
-	}//end Echiquier
+            //colone a
+            StruCaseCharInt pca1 = new StruCaseCharInt('a', 1);
+            Case a1 = new Case(pca1, "noire");
+            
+            StruCaseCharInt pca2 = new StruCaseCharInt('a', 2);
+            Case a2 = new Case(pca2, "blanche");
+            StruCaseCharInt pca3 = new StruCaseCharInt('a', 3);
+            Case a3 = new Case(pca3, "noire");
+            StruCaseCharInt pca4 = new StruCaseCharInt('a', 4);
+            Case a4 = new Case(pca4, "blanche");
+            StruCaseCharInt pca5 = new StruCaseCharInt('a', 5);
+            Case a5 = new Case(pca5, "noire");
+            StruCaseCharInt pca6 = new StruCaseCharInt('a', 6);
+            Case a6 = new Case(pca6, "blanche");
+            StruCaseCharInt pca7 = new StruCaseCharInt('a', 7);
+            Case a7 = new Case(pca7, "noire");
+            StruCaseCharInt pca8 = new StruCaseCharInt('a', 8);
+            Case a8 = new Case(pca8, "blanche");
+
+            //colone b
+            StruCaseCharInt pcb1 = new StruCaseCharInt('b', 1);
+            Case b1 = new Case(pcb1, "blanche");
+            StruCaseCharInt pcb2 = new StruCaseCharInt('b', 2);
+            Case b2 = new Case(pcb2, "noire");
+            StruCaseCharInt pcb3 = new StruCaseCharInt('b', 3);
+            Case b3 = new Case(pcb3, "blanche");
+            StruCaseCharInt pcb4 = new StruCaseCharInt('b', 4);
+            Case b4 = new Case(pcb4, "noire");
+            StruCaseCharInt pcb5 = new StruCaseCharInt('b', 5);
+            Case b5 = new Case(pcb5, "blanche");
+            StruCaseCharInt pcb6 = new StruCaseCharInt('b', 6);
+            Case b6 = new Case(pcb6, "noire");
+            StruCaseCharInt pcb7 = new StruCaseCharInt('b', 7);
+            Case b7 = new Case(pcb7, "blanche");
+            StruCaseCharInt pcb8 = new StruCaseCharInt('b', 8);
+            Case b8 = new Case(pcb8, "noire");
+
+            //colone c
+            StruCaseCharInt pcc1 = new StruCaseCharInt('c', 1);
+            Case c1 = new Case(pcc1, "noire");
+            StruCaseCharInt pcc2 = new StruCaseCharInt('c', 2);
+            Case c2 = new Case(pcc2, "blanche");
+            StruCaseCharInt pcc3 = new StruCaseCharInt('c', 3);
+            Case c3 = new Case(pcc3, "noire");
+            StruCaseCharInt pcc4 = new StruCaseCharInt('c', 4);
+            Case c4 = new Case(pcc4, "blanche");
+            StruCaseCharInt pcc5 = new StruCaseCharInt('c', 5);
+            Case c5 = new Case(pcc5, "noire");
+            StruCaseCharInt pcc6 = new StruCaseCharInt('c', 6);
+            Case c6 = new Case(pcc6, "blanche");
+            StruCaseCharInt pcc7 = new StruCaseCharInt('c', 7);
+            Case c7 = new Case(pcc7, "noire");
+            StruCaseCharInt pcc8 = new StruCaseCharInt('c', 8);
+            Case c8 = new Case(pcc8, "blanche");
+
+
+            //colone d
+            StruCaseCharInt pcd1 = new StruCaseCharInt('d', 1);
+            Case d1 = new Case(pcd1, "blanche");
+            StruCaseCharInt pcd2 = new StruCaseCharInt('d', 2);
+            Case d2 = new Case(pcd2, "noire");
+            StruCaseCharInt pcd3 = new StruCaseCharInt('d', 3);
+            Case d3 = new Case(pcd3, "blanche");
+            StruCaseCharInt pcd4 = new StruCaseCharInt('d', 4);
+            Case d4 = new Case(pcd4, "noire");
+            StruCaseCharInt pcd5 = new StruCaseCharInt('d', 5);
+            Case d5 = new Case(pcd5, "blanche");
+            StruCaseCharInt pcd6 = new StruCaseCharInt('d', 6);
+            Case d6 = new Case(pcd6, "noire");
+            StruCaseCharInt pcd7 = new StruCaseCharInt('d', 7);
+            Case d7 = new Case(pcd7, "blanche");
+            StruCaseCharInt pcd8 = new StruCaseCharInt('d', 8);
+            Case d8 = new Case(pcd8, "noire");
+
+            //colone e
+            StruCaseCharInt pce1 = new StruCaseCharInt('e', 1);
+            Case e1 = new Case(pce1, "noire");
+            StruCaseCharInt pce2 = new StruCaseCharInt('e', 2);
+            Case e2 = new Case(pce2, "blanche");
+            StruCaseCharInt pce3 = new StruCaseCharInt('e', 3);
+            Case e3 = new Case(pce3, "noire");
+            StruCaseCharInt pce4 = new StruCaseCharInt('e', 4);
+            Case e4 = new Case(pce4, "blanche");
+            StruCaseCharInt pce5 = new StruCaseCharInt('e', 5);
+            Case e5 = new Case(pce5, "noire");
+            StruCaseCharInt pce6 = new StruCaseCharInt('e', 6);
+            Case e6 = new Case(pce6, "blanche");
+            StruCaseCharInt pce7 = new StruCaseCharInt('e', 7);
+            Case e7 = new Case(pce7, "noire");
+            StruCaseCharInt pce8 = new StruCaseCharInt('e', 8);
+            Case e8 = new Case(pce8, "blanche");
+
+            //colone f
+            StruCaseCharInt pcf1 = new StruCaseCharInt('f', 1);
+            Case f1 = new Case(pcf1, "blanche");
+            StruCaseCharInt pcf2 = new StruCaseCharInt('f', 2);
+            Case f2 = new Case(pcf2, "noire");
+            StruCaseCharInt pcf3 = new StruCaseCharInt('f', 3);
+            Case f3 = new Case(pcf3, "blanche");
+            StruCaseCharInt pcf4 = new StruCaseCharInt('f', 4);
+            Case f4 = new Case(pcf4, "noire");
+            StruCaseCharInt pcf5 = new StruCaseCharInt('f', 5);
+            Case f5 = new Case(pcf5, "blanche");
+            StruCaseCharInt pcf6 = new StruCaseCharInt('f', 6);
+            Case f6 = new Case(pcf6, "noire");
+            StruCaseCharInt pcf7 = new StruCaseCharInt('f', 7);
+            Case f7 = new Case(pcf7, "blanche");
+            StruCaseCharInt pcf8 = new StruCaseCharInt('f', 8);
+            Case f8 = new Case(pcf8, "noire");
+
+            //colone g
+            StruCaseCharInt pcg1 = new StruCaseCharInt('g', 1);
+            Case g1 = new Case(pcg1, "noire");
+            StruCaseCharInt pcg2 = new StruCaseCharInt('g', 2);
+            Case g2 = new Case(pcg2, "blanche");
+            StruCaseCharInt pcg3 = new StruCaseCharInt('g', 3);
+            Case g3 = new Case(pcg3, "noire");
+            StruCaseCharInt pcg4 = new StruCaseCharInt('g', 4);
+            Case g4 = new Case(pcg4, "blanche");
+            StruCaseCharInt pcg5 = new StruCaseCharInt('g', 5);
+            Case g5 = new Case(pcg5, "noire");
+            StruCaseCharInt pcg6 = new StruCaseCharInt('g', 6);
+            Case g6 = new Case(pcg6, "blanche");
+            StruCaseCharInt pcg7 = new StruCaseCharInt('g', 7);
+            Case g7 = new Case(pcg7, "noire");
+            StruCaseCharInt pcg8 = new StruCaseCharInt('g', 8);
+            Case g8 = new Case(pcg8, "blanche");
+
+            // colone h
+            StruCaseCharInt pch1 = new StruCaseCharInt('h', 1);
+            Case h1 = new Case(pch1, "blanche");
+            StruCaseCharInt pch2 = new StruCaseCharInt('h', 2);
+            Case h2 = new Case(pch2, "noire");
+            StruCaseCharInt pch3 = new StruCaseCharInt('h', 3);
+            Case h3 = new Case(pch3, "blanche");
+            StruCaseCharInt pch4 = new StruCaseCharInt('h', 4);
+            Case h4 = new Case(pch4, "noire");
+            StruCaseCharInt pch5 = new StruCaseCharInt('h', 5);
+            Case h5 = new Case(pch5, "blanche");
+            StruCaseCharInt pch6 = new StruCaseCharInt('h', 6);
+            Case h6 = new Case(pch6, "noire");
+            StruCaseCharInt pch7 = new StruCaseCharInt('h', 7);
+            Case h7 = new Case(pch7, "blanche");
+            StruCaseCharInt pch8 = new StruCaseCharInt('h', 8);
+            Case h8 = new Case(pch8, "noire");
+                        
+            this.sesCases[0] = a1;
+            this.sesCases[1] = a2;
+            this.sesCases[2] = a3;
+            this.sesCases[3] =a4 ;
+            this.sesCases[4] =a5 ;
+            this.sesCases[5] =a6 ;
+            this.sesCases[6] =a7 ;
+            this.sesCases[7] =a8 ;
+            this.sesCases[8] =b1 ;
+            this.sesCases[9] =b2 ;
+            this.sesCases[10] =b3 ;
+            this.sesCases[11] =b4 ;
+            this.sesCases[12] =b5 ;
+            this.sesCases[13] =b6 ;
+            this.sesCases[14] =b7 ;
+            this.sesCases[15] =b8 ;
+            this.sesCases[16] =c1 ;
+            this.sesCases[17] =c2 ;
+            this.sesCases[18] =c3 ;
+            this.sesCases[19] =c4 ;
+            this.sesCases[20] =c5 ;
+            this.sesCases[21] =c6 ;
+            this.sesCases[22] =c7 ;
+            this.sesCases[23] =c8 ;
+            this.sesCases[24] =d1 ;
+            this.sesCases[25] =d2 ;
+            this.sesCases[26] =d3 ;
+            this.sesCases[27] =d4 ;
+            this.sesCases[28] = d5;
+            this.sesCases[29] = d6;
+            this.sesCases[30] = d7;
+            this.sesCases[31] = d8;
+            this.sesCases[32] = e1;
+            this.sesCases[33] = e2;
+            this.sesCases[34] = e3;
+            this.sesCases[35] = e4;
+            this.sesCases[36] = e5;
+            this.sesCases[37] = e6;
+            this.sesCases[38] = e7;
+            this.sesCases[39] = e8;
+            this.sesCases[40] = f1;
+            this.sesCases[41] = f2;
+            this.sesCases[42] = f3;
+            this.sesCases[43] = f4;
+            this.sesCases[44] = f5;
+            this.sesCases[45] = f6;
+            this.sesCases[46] = f7;
+            this.sesCases[47] = f8;
+            this.sesCases[48] = g1;
+            this.sesCases[49] = g2;
+            this.sesCases[50] = g3;
+            this.sesCases[51] = g4;
+            this.sesCases[52] = g5;
+            this.sesCases[53] = g6;
+            this.sesCases[54] = g7;
+            this.sesCases[55] = g8;
+            this.sesCases[56] = h1;
+            this.sesCases[57] = h2;
+            this.sesCases[58] = h3;
+            this.sesCases[59] = h4;
+            this.sesCases[60] = h5;
+            this.sesCases[61] = h6;
+            this.sesCases[62] = h7;
+            this.sesCases[63] = h8;
+            
+
+        }
+        public void RemplirEchiquierDePiece()
+        {
+
+        }
+
+    }//end Echiquier
 
 }//end namespace JeuxEchecs

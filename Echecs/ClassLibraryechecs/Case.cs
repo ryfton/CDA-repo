@@ -21,12 +21,12 @@ namespace JeuxEchecs {
 	public class Case {
 
 		private string saCouleur;
-		private StruCaseCharInt SaPosition;
-
+		private StruCaseCharInt saPosition;
+		public StruCaseCharInt SaPosition { get => SaPosition; }
 		public Case(StruCaseCharInt _caseCharInt, string _couleur)
 		{
 			saCouleur = _couleur;
-			SaPosition = _caseCharInt;
+			saPosition = _caseCharInt;
 
 		}
 
@@ -34,7 +34,7 @@ namespace JeuxEchecs {
 
         public bool EstLibre(Piece _unepiece){
 			bool ok = false;
-            if (this.SaPosition==_unepiece.SaPosition)
+            if (this.saPosition==_unepiece.SaPosition)
             {
 				ok = false;
             }
